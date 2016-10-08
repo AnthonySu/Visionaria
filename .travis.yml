@@ -1,15 +1,6 @@
-require "rake/testtask"
-
-Rake::TestTask.new do |t|
-  t.pattern = "test/**/*_test.rb"
-end
-
-task default: :test
-
-language: ruby
 rvm:
  - 2.2.2
 # - jruby
 # - rbx-2
 # uncomment and edit the following line if your project needs to run something other than `rake`:
-# script: bundle exec rspec spec
+script: bundle exec rspec spec
