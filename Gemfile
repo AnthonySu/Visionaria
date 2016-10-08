@@ -35,7 +35,19 @@ group :development, :test do
   gem 'byebug'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
+  gem 'jasmine-rails'
 end
+
+group :test do
+  gem 'rspec-rails', '2.14'
+  gem 'simplecov', :require => false
+  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails-training-wheels'
+  gem 'database_cleaner'
+  gem 'autotest-rails'
+  gem 'factory_girl_rails'
+  gem 'metric_fu'
+end  
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
@@ -45,3 +57,7 @@ group :development do
   gem 'spring'
 end
 
+group :production do
+  gem 'pg' # for Heroku deployment
+  gem 'rails_12factor'
+end
