@@ -6,7 +6,7 @@ Feature: Search posts by tags
   Background:
     Given I am on the home page
     And   the following users exist
-    
+
       | user_id     | username      | password          | name      | email             |
       | 1           | dodobird      | dodosrule         | Dodo B.   | dodo@example.com  |
       | 2           | edasaur       | dinosaursarecool  | Dino E.   | dino@example.com  |
