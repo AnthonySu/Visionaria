@@ -1,6 +1,6 @@
 Feature: Sign up and login
   As a social media user
-  In order to 
+  In order to share my thoughts/contributions in a safe, positive environments and look at others' thoughts/contributions
   I want to be able to sign up and login to Visionaria
   
   Background: 
