@@ -16,7 +16,3 @@ Given /sign up as "([^"]*)" with "([^"]*)", and email "([^"]*)"/ do |user, passw
   click_button "Sign up"
   step %Q{I should see "#{user}"}
 end
-
-When /follow the user "([^"]*)"/ do |username|
-  pending # Write code here that turns the phrase above into concrete actions
-end

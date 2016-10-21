@@ -5,7 +5,3 @@ Given /the following posts exist/ do |table|
     Post.create(post)
   end
 end
-
-Then /should see "([^"]*)" points? for "([^"]*)"/ do |num_points, goal|
-  pending # Write code here that turns the phrase above into concrete actions
-end

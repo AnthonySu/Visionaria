@@ -1,7 +1,8 @@
 <h1>README</h1>
 
-<p><a href="https://codeclimate.com/github/rails/rails"><img src="https://codeclimate.com/github/rails/rails/badges/gpa.svg" /></a> <br>
-<img src="https://travis-ci.org/joannangx/visionaria_app.svg?branch=master"/></p>
+<p><a href="https://codeclimate.com/github/joannangx/visionaria_app"><img src="https://codeclimate.com/github/joannangx/visionaria_app/badges/gpa.svg" /></a> <br>
+<img src="https://travis-ci.org/joannangx/visionaria_app.svg?branch=master"/> <br>
+<a href="https://codeclimate.com/github/joannangx/visionaria_app/coverage"><img src="https://codeclimate.com/github/joannangx/visionaria_app/badges/coverage.svg" /></a></p>
 
 <p>Heroku: https://visionaria-app.herokuapp.com/ <br>
 Pivotal Tracker: https://www.pivotaltracker.com/n/projects/1887925</p>
