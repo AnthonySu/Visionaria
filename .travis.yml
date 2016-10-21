@@ -1,5 +1,16 @@
 rvm:
  - 2.2.2
+addons:
+    code_climate:
+        repo_token: 236b471957461a5cee7542bd04b1f6951967eb18d8321899ff9f71fd75422cee
+        
+script:
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+  - bundle exec rspec
+  - bundle exec cucumber
+after_script:
+  - bundle exec rake send_to_codeclimate 
 # - jruby
 # - rbx-2
 # uncomment and edit the following line if your project needs to run something other than `rake`:

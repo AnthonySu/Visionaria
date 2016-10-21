@@ -17,11 +17,11 @@ Feature: Make posts
       | edasaur   | "comments"    |
       | dodobird  | "comments2"   |
   
-    And   I am logged in as "dodobird" with "dodosrule"
+    And   I sign up as "dodo" with "dodosrule", and email "dodo@dodo.com"
   
   Scenario: Successfully make a post
     When  I follow "Make Post"
-    And   I fill in "Content" with "comments3"
+    And   I fill in "content" with "comments3"
     And   I press "Submit"
     Then  I should see "comments3"
     
