@@ -11,3 +11,6 @@ Pivotal Tracker: https://www.pivotaltracker.com/n/projects/1887925</p>
 for positive self-reflection. It'll also allow girls to publish statements and ideas about problems/observations 
 they see in their communities and ways they improve them. <br>
 Their website can be found here: http://www.thevisionarianetwork.org/</p>
+
+<p>Note: Test Coverage Badge doesn't seem to be updating for me. If it still says 65%, press on the badge to go to the
+coverage page. Should be 97.73% </p>
