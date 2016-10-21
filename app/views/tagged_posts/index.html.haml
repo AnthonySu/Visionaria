@@ -1,4 +1,4 @@
--#  This file is app/views/post/index.html.haml
+-#  This file is app/views/tagged_posts/index.html.haml
 %h1 Visionaria
 - if user_signed_in?
     Welcome back, 
@@ -6,9 +6,13 @@
     %br
     %br
     %br
-- @posts.each do |p|
+- @taggedposts.each do |p|
     %p= p.content
     %p= p.user
+    Tag: 
+    = link_to "#{p.tag}", tagged_posts_path(:sort_tag => p.tag)
+    Category:
+    = link_to "#{p.category}", tagged_posts_path(:sort_category => p.category)
     %p= p.created_at
     %br
 

@@ -1,0 +1,12 @@
+%h1 Make New Post
+- if !user_signed_in?
+    redirect_to root
+= form_tag :action => 'create', :method => :post do
+    = label_tag :content, 'Your Thoughts'
+    = text_field_tag :content
+    %br
+    = label_tag :category, 'Category'
+    = text_field_tag :category
+    = label_tag :tag, 'Tag'
+    = text_field_tag :tag
+    = submit_tag 'Submit'

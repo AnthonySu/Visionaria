@@ -7,4 +7,6 @@ class UserController < ApplicationController
     def destroy
     end
   
+    def create
+    end
 end
