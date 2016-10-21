@@ -1,4 +1,4 @@
-Feature: Filter posts by 17 Sustainable Development Goals
+Feature: Filter posts by 17 Sustainable Development Goals (Category)
   As a social media user
   In order to learn more about what others have to say about the 17 Sustainable Development Goals
   I want to be able to filter posts by the 17 Sustainable Development Goals
