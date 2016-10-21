@@ -15,17 +15,12 @@ class TaggedPostsController < ApplicationController
     end
 
     def create
-        #@post = Post.create!({:content => params[:content], :user => current_user.username})
-        
         @tagged = TaggedPost.new
         @tagged.content = params[:content]
         @user = current_user
         @tagged.user = @user.username
         @tagged.tag = params[:tag]
         @tagged.category = params[:category]
-        puts params[:tag]
-        puts params[:category]
-        puts @tagged.inspect
         @tagged.save
         flash[:notice] = "Post successfully saved!"
         redirect_to tagged_posts_path
