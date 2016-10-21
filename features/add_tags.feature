@@ -1,4 +1,4 @@
-Feature: Add and edit tags to posts
+Feature: Add tags to posts
   As a social media user
   In order to organize my posts
   I want to be able to add tags to my posts
