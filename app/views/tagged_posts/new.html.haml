@@ -5,8 +5,8 @@
     = label_tag :content, 'Your Thoughts'
     = text_field_tag :content
     %br
-    = label_tag :category, 'Category'
-    = select :category,['No Poverty', 'Zero Hunger', 'Good Health and Well-being', 'Quality Education', 'Gender Equality', 'Clean Water and Sanitation', 'Affordable and Clean Energy', 'Decent Work and Ecnomic Growth', 'Industry, Innovation and Infrastructure', 'Reduced Inqualities', 'Sustainale Cities and Communities', 'Responsible Consumption and Production', 'Climate Action', 'Life below Water', 'Life on Land', 'Peace, Justice and Strong institutions', 'Partnership for the Goals']
+    = label :post, :category, 'Category'
+    = select :post, :category,['No Poverty', 'Zero Hunger', 'Good Health and Well-being', 'Quality Education', 'Gender Equality', 'Clean Water and Sanitation', 'Affordable and Clean Energy', 'Decent Work and Ecnomic Growth', 'Industry, Innovation and Infrastructure', 'Reduced Inqualities', 'Sustainale Cities and Communities', 'Responsible Consumption and Production', 'Climate Action', 'Life below Water', 'Life on Land', 'Peace, Justice and Strong institutions', 'Partnership for the Goals']
     
     = label_tag :tag, 'Tag'
     = text_field_tag :tag
