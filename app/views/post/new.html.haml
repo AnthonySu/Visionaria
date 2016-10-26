@@ -1,7 +1,7 @@
-%h1 Make New Post
+%h2 Make New Post
 - if !user_signed_in?
     redirect_to root
 = form_tag :action => 'create', :method => :post do
-    = label_tag :content, 'Your Thoughts'
-    = text_field_tag :content
+    = label :post, :content, 'Your Thoughts'
+    = text_field :post, :content
     = submit_tag 'Submit'

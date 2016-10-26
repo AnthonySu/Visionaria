@@ -1,0 +1,19 @@
+<body class="Welcome">
+%br
+%br
+%br
+%br
+<h1>Visionaria</h1>
+%br
+%br
+%br
+%br
+%div{:class => "sign_ins" }
+    = link_to 'Login', new_user_session_path
+    %br
+    %br
+    = link_to 'Sign up', new_user_registration_path
+    %br
+    %br
+    = link_to image_tag('fb_login.png'), user_facebook_omniauth_authorize_path
+</body>

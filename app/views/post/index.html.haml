@@ -1,21 +1,10 @@
 -#  This file is app/views/post/index.html.haml
-%h1 Visionaria
-- if user_signed_in?
-    Welcome back, 
-    = current_user.username
-    %br
-    %br
-    %br
+= render 'shared/header'
+%br
+%br
 - @posts.each do |p|
-    %p= p.content
-    %p= p.user
-    %p= p.created_at
-    %br
+    = render 'shared/indiv_post', :post => p
 
-- if !user_signed_in?
-    = link_to 'Login', new_user_session_path
-    = link_to 'Sign up', new_user_registration_path
 - if user_signed_in?
     = link_to 'Make Post', new_post_path, :method => :get
-    = link_to 'Make Tagged Post', new_tagged_post_path, :method => :get
     = link_to 'Logout', destroy_user_session_path, :method => :delete

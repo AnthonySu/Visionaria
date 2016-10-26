@@ -1,0 +1,46 @@
+body {
+    background-color: aliceblue;
+}
+
+h2 {
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 60px;
+    text-align: center;
+    color: lightslategrey;
+}
+
+.tabs {
+    font-family: "Courier New", Courier, monospace;
+    background-color: lightgrey;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 3px;
+    padding-left: 3px;
+    overflow: hidden;
+}
+
+.visions {
+    border: 1px solid black;
+    padding-right: 258px;
+    padding-left: 258px;
+    float:left;
+    text-align: center;
+    font-size: 23px;
+}
+
+.goals {
+    border: 1px solid black;
+    float:right;
+    padding-right: 200px;
+    padding-left: 200px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 23px;
+}
+
+.welcome_user {
+    padding-left: 40px;
+    font-size: 20px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    color: darkslategrey;
+}

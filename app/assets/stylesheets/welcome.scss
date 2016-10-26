@@ -1,0 +1,30 @@
+// Place all the styles related to the Welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.Welcome {
+    background-color: lightblue;
+}
+
+h1 {
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 70px;
+    text-align: center;
+    color: white;
+}
+
+.sign_ins{
+    text-align: center;
+    font-size: 18px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+a:link, a:visited {
+    color: hotpink;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover, a:active {
+    color: red;
+    text-decoration: none;
+}
