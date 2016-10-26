@@ -9,5 +9,5 @@
     = select :post, :category,['No Poverty', 'Zero Hunger', 'Good Health And Well-being', 'Quality Education', 'Gender Equality', 'Clean Water And Sanitation', 'Affordable And Clean Energy', 'Decent Work And Ecnomic Growth', 'Industry, Innovation And Infrastructure', 'Reduced Inqualities', 'Sustainale Cities And Communities', 'Responsible Consumption And Production', 'Climate Action', 'Life Below Water', 'Life On Land', 'Peace, Justice and Strong Institutions', 'Partnership For The Goals']
     
     = label :post, :tag, 'Tag'
-    = text_field :post, :tag
+    = select :post, :tag, ['Observation', 'Challenge', 'Innovation']
     = submit_tag 'Submit'
