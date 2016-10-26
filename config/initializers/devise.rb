@@ -248,7 +248,9 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
-
+  config.omniauth :facebook, '1804042419852791', 'b4ce55b93b0eb6e8095239b04106a209', 
+    callback_url: "https://dodospace-joannangx.c9users.io/users/auth/facebook/callback"
+  #config.omniauth :facebook, ENV['FB_APP_ID'], ENV['FB_APP_SECRET']
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.
@@ -272,7 +274,7 @@ Devise.setup do |config|
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
   
-  config.authentication_keys = [ :login ]
+  config.authentication_keys = [ :username ]
   
   config.scoped_views = true
 end

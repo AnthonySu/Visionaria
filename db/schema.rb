@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161019044325) do
+ActiveRecord::Schema.define(version: 20161026005645) do
 
   create_table "posts", force: :cascade do |t|
     t.text     "content"
@@ -19,6 +19,15 @@ ActiveRecord::Schema.define(version: 20161019044325) do
     t.datetime "updated_at", null: false
     t.integer  "user_id"
     t.string   "user"
+  end
+
+  create_table "tagged_posts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "category"
+    t.string   "tag"
+    t.string   "user"
+    t.text     "content"
   end
 
   create_table "users", force: :cascade do |t|
@@ -36,6 +45,8 @@ ActiveRecord::Schema.define(version: 20161019044325) do
     t.datetime "updated_at",                             null: false
     t.boolean  "admin",                  default: false
     t.string   "username"
+    t.string   "provider"
+    t.string   "uid"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

@@ -1,0 +1,11 @@
+%h2 Visionaria
+%div{:class => "tabs" }
+    %div{:class => "visions" }
+        = link_to "VISIONARIAS", post_index_path, :method => :get
+    %div{:class => "goals" }
+        = link_to "SUSTAINABLE UN GOALS", tagged_posts_path, :method => :get
+%br
+%div{:class => "welcome_user"}
+    - if user_signed_in?
+        Welcome back, 
+        = current_user.username

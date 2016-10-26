@@ -1,0 +1,14 @@
+%div{:class => "tag_post" }
+    %div{:class => "content" }
+        %p= post.content
+    %div{:class => "user" }
+        %p= post.user
+    %div{:class => "category" }
+        Category:
+        = link_to "#{post.category}", tagged_posts_path(:sort_category => post.category)
+    %div{:class => "goal" }
+        Sustainable UN Goal: 
+        = link_to "#{post.tag}", tagged_posts_path(:sort_tag => post.tag)
+    %div{:class => "timestamp" }
+        %p= post.created_at
+%br
