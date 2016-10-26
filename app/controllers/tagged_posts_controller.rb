@@ -4,6 +4,7 @@ class TaggedPostsController < ApplicationController
         params.require(:post).permit(:user, :content, :tag, :category)
     end 
 
+
     def index
         if !user_signed_in?
             redirect_to root_path
