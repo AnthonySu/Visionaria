@@ -21,8 +21,8 @@ Feature: Add tags to posts
     
   Scenario: Create a new post with tags
     When  I follow "Make Tagged Post"
-    And   I fill in "content" with "comments3"
-    And   I fill in "tag" with "puertorico"
-    And   I fill in "category" with "Quality Education"
+    And   I fill in "Your Thoughts" with "comments3"
+    And   I fill in "Tag" with "puertorico"
+    And   I select "Quality Education" from "Category"
     And   I press "Submit"
     Then  I should see "puertorico"

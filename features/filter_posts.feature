@@ -28,11 +28,11 @@ Feature: Filter posts by 17 Sustainable Development Goals (Category)
     
   Scenario: Can make a post relating to one of the Sustainable Development Goals
     When  I follow "Make Tagged Post"
-    And   I fill in "content" with "comments4"
-    And   I fill in "category" with "Water"
-    And   I fill in "tag" with "Innovation"
+    And   I fill in "Your Thoughts" with "comments4"
+    And   I select "Clean Water And Sanitation" from "Category"
+    And   I fill in "Tag" with "Innovation"
     And   I press "Submit"
     Then  I look at the tagged posts
-    When  I follow "Water"
+    When  I follow "Clean Water And Sanitation"
     Then  I should see "comments4"
     And   I should not see "comments2"

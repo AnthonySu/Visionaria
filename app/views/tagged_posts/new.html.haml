@@ -2,12 +2,12 @@
 - if !user_signed_in?
     redirect_to root
 = form_tag :action => 'create', :method => :post do
-    = label_tag :content, 'Your Thoughts'
-    = text_field_tag :content
+    = label :post, :content, 'Your Thoughts'
+    = text_field :post, :content
     %br
     = label :post, :category, 'Category'
     = select :post, :category,['No Poverty', 'Zero Hunger', 'Good Health And Well-being', 'Quality Education', 'Gender Equality', 'Clean Water And Sanitation', 'Affordable And Clean Energy', 'Decent Work And Ecnomic Growth', 'Industry, Innovation And Infrastructure', 'Reduced Inqualities', 'Sustainale Cities And Communities', 'Responsible Consumption And Production', 'Climate Action', 'Life Below Water', 'Life On Land', 'Peace, Justice and Strong Institutions', 'Partnership For The Goals']
     
-    = label_tag :tag, 'Tag'
-    = text_field_tag :tag
+    = label :post, :tag, 'Tag'
+    = text_field :post, :tag
     = submit_tag 'Submit'
