@@ -30,7 +30,7 @@ Feature: Filter posts by 17 Sustainable Development Goals (Category)
     When  I follow "Make Tagged Post"
     And   I fill in "Your Thoughts" with "comments4"
     And   I select "Clean Water And Sanitation" from "Category"
-    And   I fill in "Tag" with "Innovation"
+    And   I select "Innovation" from "Tag"
     And   I press "Submit"
     Then  I look at the tagged posts
     When  I follow "Clean Water And Sanitation"
