@@ -4,5 +4,5 @@
     %div{:class => "user" }
         %p= post.user
     %div{:class => "timestamp" }
-        %p= post.created_at
+        %p= post.created_at.strftime("%m/%d/%Y at %l:%M%p")
 %br
