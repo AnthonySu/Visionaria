@@ -21,7 +21,7 @@ Feature: Make posts
   
   Scenario: Successfully make a post
     When  I follow "Make Post"
-    And   I fill in "content" with "comments3"
+    And   I fill in "Your Thoughts" with "comments3"
     And   I press "Submit"
     Then  I should see "comments3"
     

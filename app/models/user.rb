@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
          #, :authentication_keys => [:username]
   
   #devise :omniauthable, :omniauth_providers => [:facebook]
+  has_many :comments
   
   validates :username,
   :presence => true
