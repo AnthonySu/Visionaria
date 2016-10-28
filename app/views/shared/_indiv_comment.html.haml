@@ -4,5 +4,5 @@
     %div{:class => "user" }
         %p= comment.username
     %div{:class => "timestamp" }
-        %p= comment.created_at
+        %p= comment.created_at.strftime("%m/%d/%Y at %l:%M%p")
 %br
