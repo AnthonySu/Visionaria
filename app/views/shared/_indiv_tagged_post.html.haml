@@ -11,4 +11,5 @@
         = link_to "#{post.tag}", tagged_posts_path(:sort_tag => post.tag)
     %div{:class => "timestamp" }
         %p= post.created_at
+    =link_to "#{post.comments.count} Comments", tagged_post_comments_path(post)
 %br

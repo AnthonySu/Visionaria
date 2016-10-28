@@ -5,4 +5,5 @@
         %p= post.user
     %div{:class => "timestamp" }
         %p= post.created_at
+    =link_to "#{post.comments.count} Comments", post_comments_path(post)
 %br
