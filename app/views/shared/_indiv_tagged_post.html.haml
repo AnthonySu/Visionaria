@@ -10,6 +10,10 @@
         Sustainable UN Goal: 
         = link_to "#{post.tag}", tagged_posts_path(:sort_tag => post.tag)
     %div{:class => "timestamp" }
+<<<<<<< HEAD
         %p= post.created_at
     =link_to "#{post.comments.count} Comments", tagged_post_comments_path(post)
+=======
+        %p= post.created_at.strftime("%m/%d/%Y at %l:%M%p")
+>>>>>>> 370a07c4c9d7830ceae599c1689b5bd80ada44be
 %br

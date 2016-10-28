@@ -462,7 +462,10 @@
         null,
         null,
         null,
+<<<<<<< HEAD
         1,
+=======
+>>>>>>> 370a07c4c9d7830ceae599c1689b5bd80ada44be
         1,
         null,
         1,
@@ -534,7 +537,10 @@
         null,
         null,
         null,
+<<<<<<< HEAD
         1,
+=======
+>>>>>>> 370a07c4c9d7830ceae599c1689b5bd80ada44be
         null,
         1,
         null,
@@ -557,12 +563,18 @@
         null,
         null,
         1,
+<<<<<<< HEAD
         6,
         6,
+=======
+        26,
+        26,
+>>>>>>> 370a07c4c9d7830ceae599c1689b5bd80ada44be
         0,
         null,
         null,
         null,
+<<<<<<< HEAD
         null,
         null
       ],
@@ -572,6 +584,8 @@
         null,
         3,
         3,
+=======
+>>>>>>> 370a07c4c9d7830ceae599c1689b5bd80ada44be
         null,
         null
       ],
@@ -588,26 +602,41 @@
         1,
         null,
         null,
+<<<<<<< HEAD
         3,
         9,
+=======
+        10,
+        16,
+>>>>>>> 370a07c4c9d7830ceae599c1689b5bd80ada44be
         null,
         null,
         null,
         1,
+<<<<<<< HEAD
         0,
+=======
+        4,
+>>>>>>> 370a07c4c9d7830ceae599c1689b5bd80ada44be
         null
       ],
       "/home/ubuntu/workspace/visionaria_app/features/step_definitions/user_steps.rb": [
         1,
         null,
         null,
+<<<<<<< HEAD
         3,
         6,
+=======
+        16,
+        32,
+>>>>>>> 370a07c4c9d7830ceae599c1689b5bd80ada44be
         null,
         null,
         null,
         1,
         null,
+<<<<<<< HEAD
         3,
         3,
         3,
@@ -615,13 +644,26 @@
         3,
         3,
         3,
+=======
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+>>>>>>> 370a07c4c9d7830ceae599c1689b5bd80ada44be
         null
       ],
       "/home/ubuntu/workspace/visionaria_app/app/controllers/welcome_controller.rb": [
         1,
         1,
+<<<<<<< HEAD
         7,
         4,
+=======
+        13,
+>>>>>>> 370a07c4c9d7830ceae599c1689b5bd80ada44be
         null,
         null,
         null
@@ -654,10 +696,23 @@
         1,
         null
       ],
+<<<<<<< HEAD
       "/home/ubuntu/workspace/visionaria_app/app/models/tagged_post.rb": [
         1,
         1,
         1,
+=======
+      "/home/ubuntu/workspace/visionaria_app/app/controllers/welcome_controller.rb": [
+        1,
+        1,
+        21,
+        14,
+        null,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/visionaria_app/app/controllers/post_controller.rb": [
+>>>>>>> 370a07c4c9d7830ceae599c1689b5bd80ada44be
         1,
         1,
         null,
@@ -667,9 +722,16 @@
         null,
         null,
         1,
+<<<<<<< HEAD
         0,
         null,
         null,
+=======
+        14,
+        0,
+        null,
+        14,
+>>>>>>> 370a07c4c9d7830ceae599c1689b5bd80ada44be
         null,
         null,
         null,
@@ -677,6 +739,7 @@
       ],
       "/home/ubuntu/workspace/visionaria_app/app/models/post.rb": [
         1,
+<<<<<<< HEAD
         1,
         1,
         null
@@ -690,6 +753,13 @@
       ],
       "/home/ubuntu/workspace/visionaria_app/app/controllers/registrations_controller.rb": [
         1,
+=======
+        0,
+        0,
+        0,
+        0,
+        0,
+>>>>>>> 370a07c4c9d7830ceae599c1689b5bd80ada44be
         null,
         1,
         null,
@@ -763,7 +833,22 @@
         null,
         1,
         1,
+<<<<<<< HEAD
         2,
+=======
+        null,
+        1,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null,
+        null,
+>>>>>>> 370a07c4c9d7830ceae599c1689b5bd80ada44be
         null,
         null
       ],
@@ -776,15 +861,28 @@
         null,
         null,
         1,
+<<<<<<< HEAD
+=======
+        6,
+        0,
+        null,
+        6,
+        6,
+>>>>>>> 370a07c4c9d7830ceae599c1689b5bd80ada44be
+        1,
+        0,
+        null,
+<<<<<<< HEAD
+        1,
         1,
         0,
         null,
         1,
-        1,
         0,
-        null,
+=======
+        6,
         1,
-        0,
+>>>>>>> 370a07c4c9d7830ceae599c1689b5bd80ada44be
         null,
         null,
         null,
@@ -807,6 +905,10 @@
         null
       ]
     },
+<<<<<<< HEAD
     "timestamp": 1477637117
+=======
+    "timestamp": 1477633225
+>>>>>>> 370a07c4c9d7830ceae599c1689b5bd80ada44be
   }
 }
