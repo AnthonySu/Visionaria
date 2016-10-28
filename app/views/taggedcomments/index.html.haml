@@ -1,0 +1,15 @@
+-#  This file is app/views/taggedcomment/index.html.haml
+= render 'shared/header'
+%br
+%br
+= form_tag :action => 'create', :method => :comment do
+    = label :taggedcomment, :body, "Your Comment:"
+    = text_field :taggedcomment, :body
+    = check_box_tag :anonymous, 0
+    = label_tag :anonymous, "Anonymous"
+    = submit_tag "Create"
+    
+
+- @taggedcomments.each do |c|
+    = render 'shared/indiv_taggedcomment', :taggedcomment => c
+

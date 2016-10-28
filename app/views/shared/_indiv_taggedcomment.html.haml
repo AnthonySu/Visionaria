@@ -1,0 +1,8 @@
+%div{:class => "taggedcomment" }
+    %div{:class => "body"}
+        %p= taggedcomment.body
+    %div{:class => "user" }
+        %p= taggedcomment.username
+    %div{:class => "timestamp" }
+        %p= taggedcomment.created_at
+%br

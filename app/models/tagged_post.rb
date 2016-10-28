@@ -1,5 +1,5 @@
 class TaggedPost < ActiveRecord::Base
-    has_many :comments
+    has_many :taggedcomments
     validates :content, :presence => true
     validates :tag, :presence => true
     validates :category, :presence => true

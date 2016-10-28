@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     resources :comments
   end
   resources :tagged_posts do
-    resources :comments
+    resources :taggedcomments
   end
   root to: 'welcome#index'
   # The priority is based upon order of creation: first created -> highest priority.
