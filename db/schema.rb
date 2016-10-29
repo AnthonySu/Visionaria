@@ -44,10 +44,12 @@ ActiveRecord::Schema.define(version: 20161029100010) do
   create_table "taggedcomments", force: :cascade do |t|
     t.string   "username"
     t.text     "body"
+    t.integer  "tagged_post_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
-    t.integer  "tagged_post_id"
   end
+
+  add_index "taggedcomments", ["tagged_post_id"], name: "index_taggedcomments_on_tagged_post_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",    null: false
