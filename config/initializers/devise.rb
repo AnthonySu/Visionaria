@@ -248,9 +248,10 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
+  require "omniauth-facebook"
   config.omniauth :facebook, '1804042419852791', 'b4ce55b93b0eb6e8095239b04106a209', 
-    callback_url: "https://visionaria-app.herokuapp.com/users/auth/facebook/callback"
-    #callback_url: "https://dodospace-joannangx.c9users.io/users/auth/facebook/callback"
+    #callback_url: "https://visionaria-app.herokuapp.com/users/auth/facebook/callback"
+    callback_url: "https://dodospace-joannangx.c9users.io/users/auth/facebook/callback"
 
   config.omniauth :google_oauth2, '9884639142-qv16tsit81bqq06vb468le9sod9i3lt0.apps.googleusercontent.com', 'RfQMCLBnf2u8vVsaJcOiNUG3'
 
