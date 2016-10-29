@@ -7,8 +7,8 @@ class CreateTaggedcomments < ActiveRecord::Migration
 
       t.timestamps null: false
     end
-    remove_reference :comments, :taggedpost
-    remove_reference :taggedcomments, :taggedpost
-    add_reference :taggedcomments, :tagged_post
+    #remove_reference :comments, :taggedpost
+    #remove_reference :taggedcomments, :taggedpost
+    #add_reference :taggedcomments, :tagged_post
   end
 end
