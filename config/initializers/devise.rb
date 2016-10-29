@@ -250,6 +250,10 @@ Devise.setup do |config|
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
   config.omniauth :facebook, '1804042419852791', 'b4ce55b93b0eb6e8095239b04106a209', 
     callback_url: "https://visionaria-app.herokuapp.com/users/auth/facebook/callback"
+    #callback_url: "https://dodospace-joannangx.c9users.io/users/auth/facebook/callback"
+
+  config.omniauth :google_oauth2, '9884639142-qv16tsit81bqq06vb468le9sod9i3lt0.apps.googleusercontent.com', 'RfQMCLBnf2u8vVsaJcOiNUG3'
+
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
@@ -274,7 +278,7 @@ Devise.setup do |config|
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
   
-  config.authentication_keys = [ :username ]
+  config.authentication_keys = [ :email ]
   
   config.scoped_views = true
 end

@@ -41,9 +41,10 @@ a {
     border-bottom: 3px solid #d2413c;
 }
 
-a:last-child {
+a:last-child, a:nth-last-child(2) {
     background: none;
     border: none;
+    padding: 0px 0px;
 }
 
 a:link, a:visited {

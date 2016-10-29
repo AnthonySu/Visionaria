@@ -1,7 +1,7 @@
 class TaggedPostsController < ApplicationController
 
     def tagged_post_params
-        params.require(:post).permit(:user, :content, :tag, :category)
+        params.require(:post).permit(:user_id, :username, :content, :tag, :category)
     end 
 
 
@@ -28,7 +28,8 @@ class TaggedPostsController < ApplicationController
 
     def create
         @tagged = TaggedPost.create!(tagged_post_params)
-        @tagged.user = current_user.username
+        @tagged.user_id = current_user.id
+        @tagged.username = User.find(@tagged.user_id).username
         @tagged.save
         flash[:notice] = "Post successfully saved!"
         redirect_to tagged_posts_path

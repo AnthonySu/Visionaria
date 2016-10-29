@@ -2,7 +2,7 @@
     %div{:class => "content" }
         %p= post.content
     %div{:class => "user" }
-        %p= post.user
+        %p= User.find(post.user_id).username
     %div{:class => "category" }
         Category:
         = link_to "#{post.category}", tagged_posts_path(:sort_category => post.category)
