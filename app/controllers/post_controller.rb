@@ -28,4 +28,22 @@ class PostController < ApplicationController
     def destroy
     end
     
+    def like
+        if params[:id]!=nil
+            @post = Post.find(params[:id])
+        
+            if current_user.liked?(@post)
+               @like = Like.find_by(:post_id => @post.id, :user_id => current_user.id)
+               @like.destroy
+               flash[:notice] = "You unliked the post!"
+            else
+                @like = @post.likes.new
+                current_user.likes << @like
+                flash[:notice] = "You liked the post!"
+            end
+            @post.save
+        end
+        redirect_to post_index_path
+    end
+    
 end

@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   has_many :tagged_posts
   has_many :comments
   has_many :taggedcomments
-  has_many :liked_posts, :through => :likes, :source => :posts
+  has_many :likes, :source => :posts
   
   validates_presence_of :username
   validates :username, uniqueness: true
@@ -22,6 +22,10 @@ class User < ActiveRecord::Base
         user.name = auth.info.name   # assuming the user model has a name
         #user.image = auth.info.image # assuming the user model has an image
     end
+  end
+  
+  def liked?(post)
+    Like.find_by(:post_id => post.id, :user_id => self.id)
   end
 
   #def self.new_with_session(params, session)
