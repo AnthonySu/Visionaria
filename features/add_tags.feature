@@ -13,7 +13,7 @@ Feature: Add tags to posts
     
     And   the following tagged posts exist
        
-      | user      | content       | tag             | category                        |
+      | username  | content       | tag             | category                        |
       | edasaur   | "comments"    | Observation     | Zero Hunger                     |
       | dodobird  | "comments2"   | Challenge       | Quality Education               |
   

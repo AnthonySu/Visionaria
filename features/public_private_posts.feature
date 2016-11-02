@@ -13,9 +13,9 @@ Feature: Make Posts Private or Public
     
     And   the following tagged posts exist
       
-      | user      | content       | tag               | category           | comments       | likes     | public    |
-      | edasaur   | "comments"    | Zero Hunger       | Observation        |                | 0         | true      |
-      | edasaur   | "comments2"   | Zero Hunger       | Observation        |                | 0         | false     |
+      | user_id | content       | tag               | category           | taggedcomments       | likes     | public    |
+      |   2     | "comments"    | Zero Hunger       | Observation        |     2                | 0         | true      |
+      |   2     | "comments2"   | Zero Hunger       | Observation        |     1                | 0         | false     |
     
     And   I look at the tagged posts
     

@@ -13,7 +13,7 @@ Feature: Make posts
     
     And   the following posts exist
       
-      | user      | content       |
+      | username  | content       |
       | edasaur   | "comments"    |
       | dodobird  | "comments2"   |
   

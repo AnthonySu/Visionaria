@@ -13,7 +13,7 @@ Feature: Filter posts by 17 Sustainable Development Goals (Category)
      
     And   the following tagged posts exist
       
-      | user      | content       | tag             | category                        |
+      | username  | content       | tag             | category                        |
       | edasaur   | "comments"    | Observaion      | Zero Hunger                     |
       | dodobird  | "comments2"   | Challenge       | Quality Education               |
       | dodobird  | "comments3"   | Challenge       | Quality Education               |

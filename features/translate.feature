@@ -14,8 +14,8 @@ Feature: Translate
     
     And   the following tagged posts exist
       
-      | user      | content       | tag               | category           | comments       | likes     | public    |
-      | edasaur   | "comments"    | Zero Hunger       | Observation        |                | 0         | true      |
+      | username  | content       | tag               | category           | taggedcomments       | likes     | public    |
+      | edasaur   | "comments"    | Zero Hunger       | Observation        |                      | 0         | true      |
   
     And   I look at the tagged posts
     

@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
   has_many :tagged_posts
   has_many :comments
   has_many :taggedcomments
+  has_many :liked_posts, :through => :likes, :source => :posts
   
   validates_presence_of :username
   validates :username, uniqueness: true

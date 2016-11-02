@@ -13,7 +13,7 @@ Feature: Add comments and Likes to Posts
     
     And   the following tagged posts exist
       
-      | user      | content       | tag               | category           | comments       | likes     | public    |
+      | username | content       | tag               | category           | comments       | likes     | public    |
       | edasaur   | "comments"    | Zero Hunger       | Observation        |                | 0         | true      |
   
     And   I look at the tagged posts
