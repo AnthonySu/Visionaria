@@ -321,6 +321,9 @@ GEM
       json (>= 1.8, < 3)
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.0)
+    social-share-button (0.8.1)
+      coffee-rails
+      sass-rails
     spring (2.0.0)
       activesupport (>= 4.2)
     sprockets (3.7.0)
@@ -390,6 +393,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   simplecov
+  social-share-button
   spring
   sqlite3
   turbolinks
@@ -397,4 +401,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.12.5
+   1.13.0
