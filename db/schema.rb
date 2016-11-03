@@ -42,7 +42,6 @@ ActiveRecord::Schema.define(version: 20161102073550) do
     t.datetime "updated_at", null: false
     t.integer  "user_id"
     t.string   "username"
-    t.integer  "likes"
   end
 
   create_table "tagged_posts", force: :cascade do |t|
@@ -53,7 +52,6 @@ ActiveRecord::Schema.define(version: 20161102073550) do
     t.string   "username"
     t.text     "content"
     t.integer  "user_id"
-    t.integer  "likes"
   end
 
   create_table "taggedcomments", force: :cascade do |t|
