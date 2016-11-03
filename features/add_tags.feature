@@ -21,7 +21,7 @@ Feature: Add tags to posts
     And   I look at the tagged posts
     
   Scenario: Create a new post with tags
-    When  I follow "Make Post"
+    When  I follow "Share Goal"
     And   I fill in "Your Thoughts" with "comments3"
     And   I select "Innovation" from "Category"
     And   I select "Quality Education" from "Sustainable UN Goal"
