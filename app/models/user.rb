@@ -25,7 +25,11 @@ class User < ActiveRecord::Base
   end
   
   def liked?(post)
-    Like.find_by(:post_id => post.id, :user_id => self.id)
+    if post.classname == 'post'
+      Like.find_by(:post_id => post.id, :user_id => self.id)
+    else
+      Like.find_by(:tagged_post_id => post.id, :user_id => self.id)
+    end
   end
 
   #def self.new_with_session(params, session)

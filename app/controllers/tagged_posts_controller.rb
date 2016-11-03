@@ -35,4 +35,22 @@ class TaggedPostsController < ApplicationController
         redirect_to tagged_posts_path
     end
     
+    
+    def like
+        if params[:id]!=nil
+            @post = TaggedPost.find(params[:id])
+        
+            if current_user.liked?(@post)
+               @like = Like.find_by(:tagged_post_id => @post.id, :user_id => current_user.id)
+               @like.destroy
+               flash[:notice] = "You unliked the post!"
+            else
+                @like = @post.likes.create
+                current_user.likes << @like
+                flash[:notice] = "You liked the post!"
+            end
+            @post.save
+        end
+        redirect_to tagged_posts_path
+    end
 end
