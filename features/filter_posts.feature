@@ -4,7 +4,7 @@ Feature: Filter posts by 17 Sustainable Development Goals (Category)
   I want to be able to filter posts by the 17 Sustainable Development Goals
   
   Background:
-    Given I sign up as "dodo" with "dodosrule", and email "dodo@dodo.com"
+    Given I am on the homepage
     And   the following users exist
     
       | username      | password          | email             |
@@ -13,11 +13,12 @@ Feature: Filter posts by 17 Sustainable Development Goals (Category)
      
     And   the following tagged posts exist
       
-      | username  | content       | tag             | category                        |
-      | edasaur   | "comments"    | Observaion      | Zero Hunger                     |
-      | dodobird  | "comments2"   | Challenge       | Quality Education               |
-      | dodobird  | "comments3"   | Challenge       | Quality Education               |
+      | username  | user_id     | content       | tag             | category                        |
+      | edasaur   | 2           | "comments"    | Observaion      | Zero Hunger                     |
+      | dodobird  | 1           | "comments2"   | Challenge       | Quality Education               |
+      | dodobird  | 1           | "comments3"   | Challenge       | Quality Education               |
   
+    And   I sign up as "dodo" with "dodosrule", email "dodo@dodo.com", and name "Dodo"
     And   I look at the tagged posts
   
   Scenario: Click on one of the 17 Sustainable Development Goals and see only posts relating to it

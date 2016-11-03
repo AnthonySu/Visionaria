@@ -4,19 +4,20 @@ Feature: Search posts by tags
   I want to be able to search posts by tags
   
   Background:
-    Given I sign up as "dodo" with "dodosrule", and email "dodo@dodo.com"
+    Given I am on the homepage
     And   the following users exist
 
-      | username      | password          | email             |
-      | dodobird      | dodosrule         | dodo@example.com  |
-      | edasaur       | dinosaursarecool  | dino@example.com  |
+      | username      | name            | password          | email             |
+      | dodobird      | Joanna Ng       | dodosrule         | dodo@example.com  |
+      | edasaur       | Ed Wang         | dinosaursarecool  | dino@example.com  |
     
     And   the following tagged posts exist
       
-      | username  | content       | tag            | category                        |
-      | edasaur   | "comments"    | Observation    | Zero Hunger                     |
-      | dodobird  | "comments2"   | Challenge      | Quality Education               |
+      | username  | user_id   | content       | tag            | category                        |
+      | edasaur   | 2         | "comments"    | Observation    | Zero Hunger                     |
+      | dodobird  | 1         | "comments2"   | Challenge      | Quality Education               |
   
+    And   I sign up as "dodo" with "dodosrule", email "dodo@dodo.com", and name "Dodo"
     And   I look at the tagged posts
 
   Scenario: Click on a tag of an existing post to see posts relating to that tag

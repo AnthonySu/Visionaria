@@ -5,18 +5,19 @@ Feature: Share on Facebook
   I want to be able to share posts on Facebook
   
   Background:
-    Given I sign up as "dodo" with "dodosrule", and email "dodo@dodo.com"
+    Given I am on the homepage
     And   the following users exist
 
-      | username      | password          | email             |
-      | dodobird      | dodosrule         | dodo@example.com  |
-      | edasaur       | dinosaursarecool  | dino@example.com  |
+      | username      | name            | password          | email             |
+      | dodobird      | Joanna Ng       | dodosrule         | dodo@example.com  |
+      | edasaur       | Ed Wang         | dinosaursarecool  | dino@example.com  |
     
     And   the following tagged posts exist
       
-      | username  | content       | tag               | category           | comments       | likes     | public    |
-      | edasaur   | "comments"    | Zero Hunger       | Observation        |                | 0         | true      |
+      | username  | user_id     | content       | tag               | category           |
+      | edasaur   | 2           | "comments"    | Zero Hunger       | Observation        |
   
+    And   I sign up as "dodo" with "dodosrule", email "dodo@dodo.com", and name "Dodo"
     And   I look at the tagged posts
     
     Scenario: Share an existing post

@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20161102073550) do
   add_index "comments", ["post_id"], name: "index_comments_on_post_id"
 
   create_table "likes", force: :cascade do |t|
+    t.boolean  "liked"
     t.integer  "post_id"
     t.integer  "tagged_post_id"
     t.integer  "user_id"

@@ -17,3 +17,7 @@
     'Peace, Justice and Strong Institutions', 'Partnership For The Goals']
     %br
     = submit_tag 'Submit'
+    
+- if user_signed_in?
+    = link_to 'Back to Goals', tagged_posts_path, :method => :get, :class => "submits"
+    = link_to 'Logout', destroy_user_session_path, :method => :delete, :class => "logins"

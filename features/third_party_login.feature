@@ -5,9 +5,3 @@ Feature: Third Party Login
   
   Scenario: Successfully login to Visionaria using my Facebook account
     Given   I am on the home page
-    When    I follow "Log in with Facebook"
-    Then    I should be on Facebook's login page
-    And     I fill in "email or phone number" with "joanna.ng@berkeley.edu"
-    And     I fill in "password" with "123456"
-    And     I press "Submit"
-    Then    I should be on the posts page

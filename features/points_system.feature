@@ -7,16 +7,16 @@ Feature: Points System
     Given I am on the home page
     And   the following users exist
     
-      | username      | password          | email             |
-      | dodobird      | dodosrule         | dodo@example.com  |
-      | edasaur       | dinosaursarecool  | dino@example.com  |
+      | username      | name            | password          | email             |
+      | dodobird      | Joanna Ng       | dodosrule         | dodo@example.com  |
+      | edasaur       | Ed Wang         | dinosaursarecool  | dino@example.com  |
     
     And   the following tagged posts exist
       
-      | user      | content       | tag             | category                        |
-      | edasaur   | "comments"    | hunger          | Zero Hunger                     |
-      | dodobird  | "comments2"   | challenge       | Quality Education               |
-      | dodobird  | "comments3"   | onservation     | Water                           |
+      | user      | user_id     | content       | tag             | category                        |
+      | edasaur   | 2           | "comments"    | hunger          | Zero Hunger                     |
+      | dodobird  | 1           | "comments2"   | challenge       | Quality Education               |
+      | dodobird  | 1           | "comments3"   | onservation     | Water                           |
   
     And   I sign up as "dodo" with "dodosrule", and email "dodo@dodo.com"
 

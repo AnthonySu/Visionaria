@@ -7,17 +7,17 @@ Feature: Make posts
     Given I am on the home page
     And   the following users exist
     
-      | username      | password          | email             |
-      | dodobird      | dodosrule         | dodo@example.com  |
-      | edasaur       | dinosaursarecool  | dino@example.com  |
+      | username      | name            | password          | email             |
+      | dodobird      | Joanna Ng       | dodosrule         | dodo@example.com  |
+      | edasaur       | Ed Wang         | dinosaursarecool  | dino@example.com  |
     
     And   the following posts exist
       
-      | username  | content       |
-      | edasaur   | "comments"    |
-      | dodobird  | "comments2"   |
+      | username    | user_id   | content       |
+      | edasaur     | 2         | "comments"    |
+      | dodobird    | 1         | "comments2"   |
   
-    And   I sign up as "dodo" with "dodosrule", and email "dodo@dodo.com"
+    And   I sign up as "dodo" with "dodosrule", email "dodo@dodo.com", and name "Dodo"
   
   Scenario: Successfully make a post
     When  I follow "Make Post"

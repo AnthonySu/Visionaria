@@ -5,3 +5,7 @@
     = label :post, :content, 'Your Thoughts'
     = text_field :post, :content
     = submit_tag 'Submit'
+    
+- if user_signed_in?
+    = link_to 'Back to Visions', post_index_path, :method => :get, :class => "submits"
+    = link_to 'Logout', destroy_user_session_path, :method => :delete, :class => "logins"
