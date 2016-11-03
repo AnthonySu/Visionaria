@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   end
   resources :tagged_posts do
     resources :taggedcomments
+    member do
+      get 'like'
+    end
   end
   root to: 'welcome#index'
   # The priority is based upon order of creation: first created -> highest priority.

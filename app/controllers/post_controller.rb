@@ -37,7 +37,7 @@ class PostController < ApplicationController
                @like.destroy
                flash[:notice] = "You unliked the post!"
             else
-                @like = @post.likes.new
+                @like = @post.likes.create(@post_id)
                 current_user.likes << @like
                 flash[:notice] = "You liked the post!"
             end

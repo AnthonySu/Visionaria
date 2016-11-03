@@ -1,7 +1,7 @@
 class TaggedPost < ActiveRecord::Base
     belongs_to :user
     has_many :taggedcomments
-    has_many :like
+    has_many :likes
     has_many :liking_users, :through => :likes, :source => :user
     validates :content, :presence => true
     validates :tag, :presence => true
@@ -9,6 +9,10 @@ class TaggedPost < ActiveRecord::Base
     
     def self.all_categories
         %w(Observation Challenge Innovation)
+    end
+    
+    def classname
+        'taggedpost'
     end
 
     def self.all_un_goals
