@@ -1,7 +1,7 @@
 class TaggedPostsController < ApplicationController
 
     def tagged_post_params
-        params.require(:post).permit(:user, :content, :tag, :category)
+        params.require(:post).permit(:user_id, :username, :content, :tag, :category)
     end 
 
 
@@ -28,10 +28,29 @@ class TaggedPostsController < ApplicationController
 
     def create
         @tagged = TaggedPost.create!(tagged_post_params)
-        @tagged.user = current_user.username
+        @tagged.user_id = current_user.id
+        @tagged.username = User.find(@tagged.user_id).username
         @tagged.save
         flash[:notice] = "Post successfully saved!"
         redirect_to tagged_posts_path
     end
     
+    
+    def like
+        if params[:id]!=nil
+            @post = TaggedPost.find(params[:id])
+        
+            if current_user.liked?(@post)
+               @like = Like.find_by(:tagged_post_id => @post.id, :user_id => current_user.id)
+               @like.destroy
+               flash[:notice] = "You unliked the post!"
+            else
+                @like = @post.likes.create
+                current_user.likes << @like
+                flash[:notice] = "You liked the post!"
+            end
+            @post.save
+        end
+        redirect_to tagged_posts_path
+    end
 end

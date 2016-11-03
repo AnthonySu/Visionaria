@@ -2,29 +2,57 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .Welcome {
-    background-color: lightblue;
+    background-color: #ffe164;
 }
 
 h1 {
-    font-family: "Lucida Console", Monaco, monospace;
+    font-family: "Lato", sans-serif;
     font-size: 70px;
+    color: #324b5a;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    border: 5px solid;
+    width: 420px;
     text-align: center;
-    color: white;
+    margin: 0 auto;
+    background: #f0f0eb;
+    margin-top: 100px;
 }
 
 .sign_ins{
     text-align: center;
     font-size: 18px;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+a {
+    width: 195px;
+    margin: 10px auto;
+    padding: 8px 0px;
+    background: #f05f5a;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 900;
+    color: white;
+    border-bottom: 3px solid #d2413c;
+}
+
+a:last-child, a:nth-last-child(2) {
+    background: none;
+    border: none;
+    padding: 0px 0px;
 }
 
 a:link, a:visited {
-    color: hotpink;
     text-decoration: none;
-    display: inline-block;
+    display: block;
+    color: white;
 }
 
 a:hover, a:active {
-    color: red;
     text-decoration: none;
 }

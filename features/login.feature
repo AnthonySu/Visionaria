@@ -22,7 +22,7 @@ Feature: Sign up and login
     
   Scenario: Successfully sign in to existing account
     When  I follow "Login"
-    And   I fill in "Username" with "dodobird"
+    And   I fill in "Email" with "dodo@example.com"
     And   I fill in "Password" with "dodosrule"
     And   I press "Log in"
     Then  I should see "dodobird"
@@ -30,7 +30,7 @@ Feature: Sign up and login
     
   Scenario: Cannot sign in with incorrect password
     When  I follow "Login"
-    And   I fill in "Username" with "dodobird"
+    And   I fill in "Email" with "dodo@example.com"
     And   I fill in "Password" with "dodo"
     And   I press "Log in"
     Then  I should see "Invalid Username or password."

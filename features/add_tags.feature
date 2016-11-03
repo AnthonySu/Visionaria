@@ -13,16 +13,16 @@ Feature: Add tags to posts
     
     And   the following tagged posts exist
        
-      | user      | content       | tag             | category                        |
+      | username  | content       | tag             | category                        |
       | edasaur   | "comments"    | Observation     | Zero Hunger                     |
       | dodobird  | "comments2"   | Challenge       | Quality Education               |
   
     And   I look at the tagged posts
     
   Scenario: Create a new post with tags
-    When  I follow "Make Tagged Post"
+    When  I follow "Make Post"
     And   I fill in "Your Thoughts" with "comments3"
-    And   I select "Innovation" from "Tag"
-    And   I select "Quality Education" from "Category"
+    And   I select "Innovation" from "Category"
+    And   I select "Quality Education" from "Sustainable UN Goal"
     And   I press "Submit"
     Then  I should see "Innovation"

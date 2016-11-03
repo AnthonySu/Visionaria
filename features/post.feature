@@ -13,7 +13,7 @@ Feature: Make posts
     
     And   the following posts exist
       
-      | user      | content       |
+      | username  | content       |
       | edasaur   | "comments"    |
       | dodobird  | "comments2"   |
   
@@ -21,7 +21,7 @@ Feature: Make posts
   
   Scenario: Successfully make a post
     When  I follow "Make Post"
-    And   I fill in "content" with "comments3"
+    And   I fill in "Your Thoughts" with "comments3"
     And   I press "Submit"
     Then  I should see "comments3"
     

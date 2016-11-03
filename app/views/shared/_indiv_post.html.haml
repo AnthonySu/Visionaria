@@ -2,7 +2,12 @@
     %div{:class => "content" }
         %p= post.content
     %div{:class => "user" }
-        %p= post.user
+        %p= User.find(post.user_id).username
     %div{:class => "timestamp" }
-        %p= post.created_at
+        %p= post.created_at.strftime("%m/%d/%Y at %l:%M%p")
+    =form_tag do 
+        = link_to "#{post.comments.count} Comments", post_comments_path(post)
+        = toggle_like_button(post,current_user)
+        = post.likes.count
+
 %br

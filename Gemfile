@@ -24,6 +24,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
 # haml
 gem 'haml'
 # Use ActiveModel has_secure_password
@@ -34,6 +35,9 @@ gem 'haml'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+#share to social network button
+gem 'social-share-button'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
