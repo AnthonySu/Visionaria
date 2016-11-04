@@ -13,10 +13,10 @@ Feature: Points System
     
     And   the following tagged posts exist
       
-      | user      | user_id     | content       | tag             | category                        |
-      | edasaur   | 2           | "comments"    | hunger          | Zero Hunger                     |
-      | dodobird  | 1           | "comments2"   | challenge       | Quality Education               |
-      | dodobird  | 1           | "comments3"   | onservation     | Water                           |
+      | user      | user_id     | content       | tag             | category                        | public    |
+      | edasaur   | 2           | "comments"    | hunger          | Zero Hunger                     | true      |
+      | dodobird  | 1           | "comments2"   | challenge       | Quality Education               | true      |
+      | dodobird  | 1           | "comments3"   | onservation     | Water                           | true      |
   
     And   I sign up as "dodo" with "dodosrule", and email "dodo@dodo.com"
 

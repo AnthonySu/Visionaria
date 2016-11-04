@@ -13,10 +13,10 @@ Feature: Filter posts by 17 Sustainable Development Goals (Category)
      
     And   the following tagged posts exist
       
-      | username  | user_id     | content       | tag             | category                        |
-      | edasaur   | 2           | "comments"    | Observaion      | Zero Hunger                     |
-      | dodobird  | 1           | "comments2"   | Challenge       | Quality Education               |
-      | dodobird  | 1           | "comments3"   | Challenge       | Quality Education               |
+      | username  | user_id     | content       | tag             | category                        | public    |
+      | edasaur   | 2           | "comments"    | Observaion      | Zero Hunger                     | true      |
+      | dodobird  | 1           | "comments2"   | Challenge       | Quality Education               | true      |
+      | dodobird  | 1           | "comments3"   | Challenge       | Quality Education               | true      |
   
     And   I sign up as "dodo" with "dodosrule", email "dodo@dodo.com", and name "Dodo"
     And   I look at the tagged posts

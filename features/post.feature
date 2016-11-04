@@ -13,9 +13,9 @@ Feature: Make posts
     
     And   the following posts exist
       
-      | username    | user_id   | content       |
-      | edasaur     | 2         | "comments"    |
-      | dodobird    | 1         | "comments2"   |
+      | username    | user_id   | content       | public    |
+      | edasaur     | 2         | "comments"    | true      |
+      | dodobird    | 1         | "comments2"   | true      |
   
     And   I sign up as "dodo" with "dodosrule", email "dodo@dodo.com", and name "Dodo"
   

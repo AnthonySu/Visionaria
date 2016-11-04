@@ -14,8 +14,8 @@ Feature: Share on Facebook
     
     And   the following tagged posts exist
       
-      | username  | user_id     | content       | tag               | category           |
-      | edasaur   | 2           | "comments"    | Zero Hunger       | Observation        |
+      | username  | user_id     | content       | tag               | category           | public    |
+      | edasaur   | 2           | "comments"    | Zero Hunger       | Observation        | true      |
   
     And   I sign up as "dodo" with "dodosrule", email "dodo@dodo.com", and name "Dodo"
     And   I look at the tagged posts

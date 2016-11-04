@@ -13,14 +13,14 @@ Background:
     
     And   the following tagged posts exist
       
-      | username  | user_id     | content       | tag             | category                        |
-      | dodobird  | 1           | "comments2"   | Challenge       | Quality Education               |
+      | username  | user_id     | content       | tag             | category                        | public    |
+      | dodobird  | 1           | "comments2"   | Challenge       | Quality Education               | true      |
     
     And   the following posts exist
       
-      | username  | user_id     | content       |
-      | edasaur   | 2           | "content1"    |
-      | dodo      | 1           | "content2"    |
+      | username  | user_id     | content       | public    |
+      | edasaur   | 2           | "content1"    | true      |
+      | dodo      | 1           | "content2"    | true      |
     
     And   the following comments exist
       | username  | body          | post_id         |
