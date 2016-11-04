@@ -1,4 +1,4 @@
-# Don't know how Anthony is implementing this
+# Don't know how Haoran is implementing this
 # Not sure about this feature, API might not be free?
 Feature: Translate
   As a social media user
