@@ -1,7 +1,15 @@
-%h2 Make New Post
+%h2 Share New Vision
 - if !user_signed_in?
     redirect_to root
 = form_tag :action => 'create', :method => :post do
     = label :post, :content, 'Your Thoughts'
-    = text_field :post, :content
+    %br
+    //= text_field :post, :content
+    = text_area :post, :content
+    //Private
+    //= check_box_tag "private", false
     = submit_tag 'Submit'
+    
+- if user_signed_in?
+    = link_to 'Back to Visions', post_index_path, :method => :get, :class => "submits"
+    = link_to 'Logout', destroy_user_session_path, :method => :delete, :class => "logins"

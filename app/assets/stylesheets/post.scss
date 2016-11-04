@@ -3,14 +3,17 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .post, .tag_post {
     margin: auto;
-    border-radius: 8px;
-    background-color: ghostwhite;
-    border: 2px solid slategrey;
+    background-color: LightSlateGray;
+    border: 3px solid SteelBlue;
     padding-top: 8px;
     padding-right: 20px;
     padding-bottom: 8px;
     padding-left: 20px;
-    width: 900px;
+    width: 1000px;
+}
+
+.post:hover, .tag_post:hover{
+    background-color: SlateGray;
 }
 
 .content {
@@ -25,10 +28,34 @@
     text-align: right;
 }
 
-.goal, .category {
+.timestamp {
+    font-style: italic;
+}
+
+.filters {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-size: 15px;
     text-align: right;
 }
 
-textarea { height: auto; }
+/***.social-share-button-facebook {
+	width: 16px;
+	height: 16px;
+	background: url("/social/facebook.png") no-repeat;
+	float: right;
+}***/
+
+textarea { 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    height: 100px;
+}
+
+input[type=text], input[type=email], input[type=password] {
+    width: 35%;
+    padding: 8px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}

@@ -6,5 +6,5 @@
     = render 'shared/indiv_post', :post => p
 
 - if user_signed_in?
-    = link_to 'Make Post', new_post_path, :method => :get
-    = link_to 'Logout', destroy_user_session_path, :method => :delete
+    = link_to 'Share Vision', new_post_path, :method => :get, :class => "submits"
+    = link_to 'Logout', destroy_user_session_path, :method => :delete, :class => "logins"

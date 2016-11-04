@@ -253,6 +253,7 @@ Devise.setup do |config|
     callback_url: "https://visionaria-app.herokuapp.com/users/auth/facebook/callback"
     #callback_url: "https://dodospace-joannangx.c9users.io/users/auth/facebook/callback"
 
+  require "omniauth-google-oauth2"
   config.omniauth :google_oauth2, '9884639142-qv16tsit81bqq06vb468le9sod9i3lt0.apps.googleusercontent.com', 'RfQMCLBnf2u8vVsaJcOiNUG3'
 
 
