@@ -6,9 +6,6 @@
     %br
     //= text_field :post, :content
     = text_area :post, :content
-    
-    = label :post, :type, 'Private'
-    = radio_button_tag :type, 'private'
     %br
     
     = label :post, :category, 'Category'
@@ -21,8 +18,9 @@
     'Responsible Consumption And Production', 'Climate Action', 'Life Below Water', 'Life On Land', 
     'Peace, Justice and Strong Institutions', 'Partnership For The Goals']
     %br
-    //Private
-    //= check_box_tag "private", false
+    = label :post, :type, 'Private'
+    = radio_button_tag :type, 'private'
+    %br
     = submit_tag 'Submit'
     
 - if user_signed_in?
