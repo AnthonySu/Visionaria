@@ -14,26 +14,26 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-11-04T05:04:44+00:00">2016-11-04T05:04:44+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-11-04T05:17:35+00:00">2016-11-04T05:17:35+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">85.92%</span></span>
+    (<span class="covered_percent"><span class="yellow">86.02%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.17
+         3.19
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>39</b> files in total.
-    <b>277</b> relevant lines. 
-    <span class="green"><b>238</b> lines covered</span> and
+    <b>279</b> relevant lines. 
+    <span class="green"><b>240</b> lines covered</span> and
     <span class="red"><b>39</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -77,7 +77,7 @@
         <td>32</td>
         <td>19</td>
         <td>13</td>
-        <td>2.1</td>
+        <td>2.3</td>
       </tr>
       
       <tr>
@@ -117,7 +117,7 @@
         <td>4</td>
         <td>4</td>
         <td>0</td>
-        <td>13.0</td>
+        <td>13.5</td>
       </tr>
       
       <tr>
@@ -413,11 +413,11 @@
       <tr>
         <td class="strong"><a href="#330c4f1bac0571028f4dcc08c8f8911adc968395" class="src_link" title="features/step_definitions/post_steps.rb">features/step_definitions/post_steps.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>7</td>
-        <td>3</td>
-        <td>3</td>
+        <td>11</td>
+        <td>5</td>
+        <td>5</td>
         <td>0</td>
-        <td>6.3</td>
+        <td>4.2</td>
       </tr>
       
       <tr>
@@ -776,8 +776,8 @@
           <code class="ruby">    def index</code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="9">
-          <span class="hits">17</span>
+        <li class="covered" data-hits="19" data-linenumber="9">
+          <span class="hits">19</span>
           
           <code class="ruby">        if !user_signed_in?</code>
         </li>
@@ -794,14 +794,14 @@
           <code class="ruby">        end</code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="12">
-          <span class="hits">17</span>
+        <li class="covered" data-hits="19" data-linenumber="12">
+          <span class="hits">19</span>
           
           <code class="ruby">        @posts = Post.all.order(&#39;created_at DESC&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="13">
-          <span class="hits">17</span>
+        <li class="covered" data-hits="19" data-linenumber="13">
+          <span class="hits">19</span>
           
           <code class="ruby">        @users = User.all</code>
         </li>
@@ -1736,14 +1736,14 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="34" data-linenumber="3">
-          <span class="hits">34</span>
+        <li class="covered" data-hits="35" data-linenumber="3">
+          <span class="hits">35</span>
           
           <code class="ruby">    if user_signed_in?</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="4">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="17" data-linenumber="4">
+          <span class="hits">17</span>
           
           <code class="ruby">      redirect_to post_index_path</code>
         </li>
@@ -6119,8 +6119,8 @@
     <h3>features/step_definitions/post_steps.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>3</b> relevant lines. 
-      <span class="green"><b>3</b> lines covered</span> and
+      <b>5</b> relevant lines. 
+      <span class="green"><b>5</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -6165,6 +6165,30 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">When /I look at the posts/ do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  visit &#39;/post&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby">end</code>

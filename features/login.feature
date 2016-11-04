@@ -21,13 +21,15 @@ Feature: Sign up and login
     And   I press "Sign up"
     Then  I should see "cs169"
     
-  Scenario: Successfully sign in to existing account
+  Scenario: Successfully sign in to existing account and going to homepage should redirect to posts
     When  I follow "Login"
     And   I fill in "Email" with "dodo@example.com"
     And   I fill in "Password" with "dodosrule"
     And   I press "Log in"
     Then  I should see "dodobird"
     And   I should not see "edasaur"
+    Given I am on the homepage
+    Then  I look at the posts
     
   Scenario: Cannot sign in with incorrect password
     When  I follow "Login"
@@ -43,3 +45,4 @@ Feature: Sign up and login
     And   I fill in "Password" with "987657"
     And   I press "Log in"
     Then  I should see "Invalid Email or password."
+    
