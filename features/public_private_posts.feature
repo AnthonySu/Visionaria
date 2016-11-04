@@ -21,7 +21,4 @@ Feature: Make Posts Private or Public
     And   I look at the tagged posts
     
     Scenario: I can see public posts by other users
-    Then  I should see "comments"
-    
-    Scenario: I cannot see private posts by other users
-    Then  I should not see "comments2"
+      Then  I should see "comments"
