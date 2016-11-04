@@ -1,6 +1,10 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+    font-family: "Lato", sans-serif;
+}
+
 .Welcome {
     background-color: #fff4e0;
 }
@@ -46,15 +50,16 @@ a {
     padding: 8px 0px;
     border-radius: 5px;
     font-size: 16px;
-    font-weight: 900;
     color: #1879D8;
     text-decoration: none;
+    text-align: center;
 }
 
 a.logins {
     border: 2px solid #1879D8;
     transition: 0.2s ease;
     display: block;
+    font-weight: 900;
 }
 
 a.facebook, a.google {
