@@ -14,9 +14,7 @@ Background:
     And   the following tagged posts exist
       
       | username  | user_id     | content       | tag             | category                        |
-      | edasaur   | 2           | "comments"    | Observaion      | Zero Hunger                     |
       | dodobird  | 1           | "comments2"   | Challenge       | Quality Education               |
-      | dodobird  | 1           | "comments3"   | Challenge       | Quality Education               |
     
     And   the following posts exist
       
@@ -53,5 +51,5 @@ Background:
       And   I press "Create"
       Then  I should see "Good"
       And   I should see "dodo"
-      When  I am on the GOALS page
+      When  I look at the tagged posts
       Then  I should see "1 Comments"

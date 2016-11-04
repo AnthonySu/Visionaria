@@ -1,6 +1,7 @@
 <body class="Welcome">
 %br
-<h1>Visionaria</h1>
+%div{:class => "Visionaria" }
+    = image_tag("visionaria.png")
 %div{:class => "sign_ins" }
     = link_to 'Login', new_user_session_path, :class => "logins"
     = link_to 'Sign up', new_user_registration_path, :class => "logins"
