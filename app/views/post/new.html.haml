@@ -6,6 +6,8 @@
     %br
     //= text_field :post, :content
     = text_area :post, :content
+    Private
+    = check_box_tag "private", false
     = submit_tag 'Submit'
     
 - if user_signed_in?

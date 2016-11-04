@@ -53,3 +53,7 @@ Background:
       And   I should see "dodo"
       When  I look at the tagged posts
       Then  I should see "1 Comments"
+      
+    Scenario: Successfully like a post
+      When  I follow "SUSTAINABLE UN GOALS"
+      
