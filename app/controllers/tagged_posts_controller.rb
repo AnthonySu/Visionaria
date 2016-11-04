@@ -9,7 +9,7 @@ class TaggedPostsController < ApplicationController
         if !user_signed_in?
             redirect_to root_path
         end
-        @taggedposts = TaggedPost.all.order('created_at DESC')
+        @taggedposts = TaggedPost.where('public = ? OR username = ?', true, current_user.username).order('created_at DESC')
         if params[:sort_tag] 
             @taggedposts = @taggedposts.where(tag: params[:sort_tag]).order('created_at DESC')
         end
@@ -30,6 +30,8 @@ class TaggedPostsController < ApplicationController
         @tagged = TaggedPost.create!(tagged_post_params)
         @tagged.user_id = current_user.id
         @tagged.username = User.find(@tagged.user_id).username
+        @tagged.public = true
+        @tagged.public = false if params[:type] == 'private'
         @tagged.save
         flash[:notice] = "Post successfully saved!"
         redirect_to tagged_posts_path

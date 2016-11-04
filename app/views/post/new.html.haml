@@ -4,4 +4,8 @@
 = form_tag :action => 'create', :method => :post do
     = label :post, :content, 'Your Thoughts'
     = text_field :post, :content
+    
+    = label :post, :type, 'Private'
+    = radio_button_tag :type, 'private'
+    
     = submit_tag 'Submit'
