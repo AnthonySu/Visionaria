@@ -22,7 +22,7 @@ class PostController < ApplicationController
         @post.user_id = current_user.id
         @post.username = User.find(@post.user_id).username
         @post.public = true
-        @post.public = false if params[:type] = 'private'
+        @post.public = false if params[:type] == 'private'
         @post.save
         flash[:notice] = "Post successfully saved!"
         redirect_to post_index_path
