@@ -1,4 +1,3 @@
-#Don't actually know how this scenario should go
 Feature: Share on Facebook
   As a social media user
   In order to share inspiring posts on Visionaria with friends on other social media platforms
@@ -21,7 +20,3 @@ Feature: Share on Facebook
     And   I look at the tagged posts
     
     Scenario: Share an existing post
-    When  I press "Share"
-    Then  I should see "Share post on timeline?"
-    When  I press "Yes"
-    Then  I should see "post shared on timeline"

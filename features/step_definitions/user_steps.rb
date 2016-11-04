@@ -17,3 +17,13 @@ Given /sign up as "([^"]*)" with "([^"]*)", email "([^"]*)", and name "([^"]*)"/
   click_button "Sign up"
   step %Q{I should see "#{user}"}
 end
+
+Given /facebook login/  do
+  find(:css, 'a.facebook').click
+end
+
+Given /I should put in email "([^"]*)" and password "([^"]*)"/ do |user, password|
+  fill_in('email', with: user)
+  fill_in('pass', with: password)
+  click_button('Log In')
+end

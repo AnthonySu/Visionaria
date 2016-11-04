@@ -4,4 +4,4 @@ Feature: Third Party Login
   I want to be able to login to Visionaria through Facebook
   
   Scenario: Successfully login to Visionaria using my Facebook account
-    Given   I am on the home page
+    Given   I am on the homepage

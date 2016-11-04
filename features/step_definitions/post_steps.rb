@@ -5,3 +5,7 @@ Given /the following posts exist/ do |table|
     Post.create(post)
   end
 end
+
+When /I look at the posts/ do
+  visit '/post'
+end

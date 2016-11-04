@@ -19,6 +19,18 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 # If you are not using ActiveRecord, you can remove this line.
 ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
 
+OmniAuth.config.test_mode = true
+  OmniAuth.config.mock_auth[:facebook] = OmniAuth::AuthHash.new({
+    :provider => 'facebook',
+    :uid => '12345',
+    :email => "foobar@example.com",
+    :first_name => "foo",
+    :last_name => "bar",
+    :password => "gpKU7CaS6p95E6zB"    
+  })
+
+OmniAuth.config.add_mock(:facebook, {:uid => '12345'})
+
 RSpec.configure do |config|
   # ## Mock Framework
   #
