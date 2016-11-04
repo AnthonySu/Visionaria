@@ -13,12 +13,14 @@ Feature: Make Posts Private or Public
     
     And   the following tagged posts exist
       
-      | username      | user_id | content       | tag               | category           |
-      | edasaur       | 2       | "comments"    | Zero Hunger       | Observation        |
-      | edasaur       | 2       | "comments2"   | Zero Hunger       | Observation        |
+      | username      | user_id | content       | tag               | category           | public |
+      | edasaur       | 2       | "comments"    | Zero Hunger       | Observation        | true   |
+      | edasaur       | 2       | "comments2"   | Zero Hunger       | Observation        | false  |
     
     And   I sign up as "dodo" with "dodosrule", email "dodo@dodo.com", and name "Joanna Ng"
     And   I look at the tagged posts
     
-    Scenario: I can see public posts by other users
+    Scenario: I can see public posts by other users and not private posts
       Then  I should see "comments"
+      And   I should not see "comments2"
+      

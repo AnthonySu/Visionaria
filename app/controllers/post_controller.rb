@@ -9,7 +9,7 @@ class PostController < ApplicationController
         if !user_signed_in?
             redirect_to root_path
         end
-        @posts = Post.all.order('created_at DESC')
+        @posts = Post.where('public = ? OR username = ?', true, current_user.username).order('created_at DESC')
         @users = User.all
     end
     
@@ -21,6 +21,8 @@ class PostController < ApplicationController
         @post = Post.create!(post_params)
         @post.user_id = current_user.id
         @post.username = User.find(@post.user_id).username
+        @post.public = true
+        @post.public = false if params[:type] = 'private'
         @post.save
         flash[:notice] = "Post successfully saved!"
         redirect_to post_index_path

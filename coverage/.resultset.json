@@ -444,11 +444,6 @@
         null,
         1
       ],
-      "/home/ubuntu/workspace/visionaria_app/config/initializers/social_share_button.rb": [
-        1,
-        1,
-        null
-      ],
       "/home/ubuntu/workspace/visionaria_app/config/initializers/wrap_parameters.rb": [
         null,
         null,
@@ -566,10 +561,18 @@
         null,
         null,
         1,
+<<<<<<< HEAD
         47,
         17,
         null,
         30,
+        null,
+=======
+        2,
+        0,
+>>>>>>> public_private_posts
+        null,
+        2,
         null,
         null,
         null,
@@ -609,26 +612,41 @@
         1,
         null,
         null,
+<<<<<<< HEAD
         10,
         17,
+=======
+        2,
+        4,
+>>>>>>> public_private_posts
         null,
         null,
         null,
         1,
+<<<<<<< HEAD
         8,
+=======
+        2,
+>>>>>>> public_private_posts
         null
       ],
       "/home/ubuntu/workspace/visionaria_app/features/step_definitions/user_steps.rb": [
         1,
         null,
         null,
+<<<<<<< HEAD
         16,
         32,
+=======
+        2,
+        4,
+>>>>>>> public_private_posts
         null,
         null,
         null,
         1,
         null,
+<<<<<<< HEAD
         12,
         12,
         12,
@@ -647,6 +665,15 @@
         0,
         0,
         0,
+=======
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+>>>>>>> public_private_posts
         null
       ],
       "/home/ubuntu/workspace/visionaria_app/app/controllers/welcome_controller.rb": [
@@ -671,6 +698,7 @@
       ],
       "/home/ubuntu/workspace/visionaria_app/app/helpers/comments_helper.rb": [
         1,
+<<<<<<< HEAD
         null
       ],
       "/home/ubuntu/workspace/visionaria_app/app/helpers/likes_helper.rb": [
@@ -678,6 +706,9 @@
         1,
         17,
         0,
+=======
+        2,
+>>>>>>> public_private_posts
         null,
         17,
         null,
@@ -874,6 +905,14 @@
         null,
         0,
         null,
+        null,
+        1,
+        2,
+        0,
+        null,
+        2,
+        null,
+        null,
         null
       ],
       "/home/ubuntu/workspace/visionaria_app/app/models/taggedcomment.rb": [
@@ -938,7 +977,179 @@
         1,
         1,
         1,
+<<<<<<< HEAD
+=======
+        2,
+        2,
+        null,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/visionaria_app/app/controllers/post_controller.rb": [
+        1,
+        1,
+        null,
+        1,
         0,
+        null,
+        null,
+        1,
+        2,
+        0,
+        null,
+        2,
+        2,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/visionaria_app/app/models/post.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/visionaria_app/app/models/tagged_post.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/visionaria_app/app/controllers/tagged_posts_controller.rb": [
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null,
+        1,
+        2,
+        0,
+        null,
+        2,
+        2,
+        0,
+        null,
+        2,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        0,
+>>>>>>> public_private_posts
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/visionaria_app/app/models/taggedcomment.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/visionaria_app/app/models/like.rb": [
+        1,
+        1,
+        1,
+        1,
         null,
         1,
         null,
@@ -966,6 +1177,10 @@
         null
       ]
     },
+<<<<<<< HEAD
     "timestamp": 1478238189
+=======
+    "timestamp": 1478238863
+>>>>>>> public_private_posts
   }
 }

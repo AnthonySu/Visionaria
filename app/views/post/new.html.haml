@@ -6,8 +6,10 @@
     %br
     //= text_field :post, :content
     = text_area :post, :content
-    //Private
-    //= check_box_tag "private", false
+    
+    = label :post, :type, 'Private'
+    = radio_button_tag :type, 'private'
+    
     = submit_tag 'Submit'
     
 - if user_signed_in?

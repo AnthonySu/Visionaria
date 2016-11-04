@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161102073550) do
+ActiveRecord::Schema.define(version: 20161104052743) do
 
   create_table "comments", force: :cascade do |t|
     t.string   "username"
@@ -42,16 +42,18 @@ ActiveRecord::Schema.define(version: 20161102073550) do
     t.datetime "updated_at", null: false
     t.integer  "user_id"
     t.string   "username"
+    t.boolean  "public"
   end
 
   create_table "tagged_posts", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.string   "category"
     t.string   "tag"
     t.string   "username"
     t.text     "content"
     t.integer  "user_id"
+    t.boolean  "public"
   end
 
   create_table "taggedcomments", force: :cascade do |t|
