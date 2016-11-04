@@ -79,3 +79,35 @@ a.logins:hover {
 a:visited {
     text-decoration: none;
 }
+
+input[type=text], input[type=email], input[type=password] {
+    width: 35%;
+    padding: 8px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.field, .actions {
+    color: #00008B;
+    text-align: center;
+}
+
+.sign_in_label {
+    float: left;
+    margin-left: 33%;
+}
+
+.sign_in {
+    float: right;
+    margin-right: 33%;
+}
+
+.remember {
+    float: right;
+    margin-right: 0.3%;
+}
+
+.min_chars {
+    float: left;
+    margin-left: 0.5%;
+}

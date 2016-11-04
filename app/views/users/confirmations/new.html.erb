@@ -4,13 +4,15 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email, :class => 'sign_in_label' %><br />
     <%= f.email_field :email, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Resend confirmation instructions" %>
+    <%= f.submit "Resend confirmation instructions", :class => 'sign_in'%>
   </div>
 <% end %>
 
-<%= render "users/shared/links" %>
+<div class="sign_in_label">
+  <%= render "users/shared/links" %>
+</div>
