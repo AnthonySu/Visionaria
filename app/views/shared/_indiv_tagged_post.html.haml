@@ -1,14 +1,18 @@
 %div{:class => "tag_post" }
-    %div{:class => "content" }
-        %p= post.content
     %div{:class => "user" }
         = User.find(post.user_id).username
-    %div{:class => "filters" }
-        Category:
-        = link_to "#{post.category}", tagged_posts_path(:sort_category => post.category), :class => "tag_sort"
-    %div{:class => "filters" }
-        Sustainable UN Goal: 
-        = link_to "#{post.tag}", tagged_posts_path(:sort_tag => post.tag), :class => "tag_sort"
+    %br
+    %div{:class => "content_wrap" }
+        %div{:class => "filters_tag" }
+            //Sustainable UN Goal: 
+            //= link_to "#{post.tag}", tagged_posts_path(:sort_tag => post.tag), :class => "tag_sort"
+            = link_to image_tag("#{post.tag}.jpg"), tagged_posts_path(:sort_tag => post.tag), :class => "tag_sort"
+        %div{:class => "tagged_content" }
+            %p= post.content
+        %div{:class => "filters_cat" }
+            //Category:
+            //= link_to "#{post.category}", tagged_posts_path(:sort_category => post.category), :class => "tag_sort"
+            = link_to image_tag("#{post.category}.png"), tagged_posts_path(:sort_category => post.category), :class => "tag_sort"
     %div{:class => "timestamp" }
         Posted on
         = post.created_at.strftime("%m/%d/%Y at %l:%M%p")
