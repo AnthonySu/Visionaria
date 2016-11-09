@@ -54,6 +54,11 @@ Background:
       When  I look at the tagged posts
       Then  I should see "1 Comments"
       
-    Scenario: Successfully like a post
-      When  I follow "SUSTAINABLE UN GOALS"
+    Scenario: Successfully make a tagged post comment anonymously
+      When  I follow "SUSTAINABLE UN GOALS"  
+      When  I follow "0 Comments"
+      And   I fill in "Your Comment" with "Secret"
+      And   I check "Anonymous"
+      And   I press "Create"
+      Then  I should see "Anonymous"
       

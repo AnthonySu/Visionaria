@@ -9,3 +9,12 @@ end
 When /I look at the tagged posts/ do
   visit '/tagged_posts'
 end
+
+When /^I follow image link "([^"]*)"$/ do |img_alt|
+    find(:xpath, "//img[@alt = '#{img_alt}']/parent::a").click()
+end
+
+
+Then /^I should see the image "(.+)"$/ do |image|
+    page.should have_xpath("//img[@alt = '#{image}']/parent::a")
+end

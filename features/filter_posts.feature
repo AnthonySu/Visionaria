@@ -22,7 +22,7 @@ Feature: Filter posts by 17 Sustainable Development Goals (Category)
     And   I look at the tagged posts
   
   Scenario: Click on one of the 17 Sustainable Development Goals and see only posts relating to it
-    When  I follow "Zero Hunger"
+    When  I follow image link "Zero Hunger"
     Then  I should see "comments"
     And   I should not see "comments2"
     And   I should not see "comments3"
@@ -34,6 +34,6 @@ Feature: Filter posts by 17 Sustainable Development Goals (Category)
     And   I select "Innovation" from "Category"
     And   I press "Submit"
     Then  I look at the tagged posts
-    When  I follow "Clean Water And Sanitation"
+    When  I follow image link "Clean Water And Sanitation"
     Then  I should see "comments4"
     And   I should not see "comments2"

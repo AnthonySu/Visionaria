@@ -26,4 +26,4 @@ Feature: Add tags to posts
     And   I select "Innovation" from "Category"
     And   I select "Quality Education" from "Sustainable UN Goal"
     And   I press "Submit"
-    Then  I should see "Innovation"
+    Then  I should see the image "Innovation"
