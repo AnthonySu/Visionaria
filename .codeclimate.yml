@@ -39,12 +39,19 @@ ratings:
   - "**.php"
   - "**.py"
 exclude_paths:
-- config/
+- config/*
 - db/
 - features/
 - script/
 - spec/
 - vendor/
+- app/controllers/application_controller.rb
+- app/helpers/application_helper.rb	
+- app/helpers/comments_helper.rb
+- app/helpers/post_helper.rb
+- app/helpers/registration_helper.rb
+- app/helpers/taggedcomments_helper.rb
+- app/helpers/welcome_helper.rb
 JavaScript: true
 Ruby: true
 Python: false
