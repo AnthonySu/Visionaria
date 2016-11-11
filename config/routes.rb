@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => { omniauth_callbacks: 'users/omniauth_callbacks', registrations: 'registrations' }
   #devise_for :users, :controllers => { omniauth_callbacks: "users/omniauth_callbacks" }
+  root 'welcome#index'
+  
   resources :post do
     resources :comments
     member do
@@ -13,7 +15,7 @@ Rails.application.routes.draw do
       get 'like'
     end
   end
-  root to: 'welcome#index'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
