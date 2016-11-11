@@ -1,22 +1,17 @@
 %h2 Make New Post
-- if !user_signed_in?
-    redirect_to root
+//- if !user_signed_in?
+//    redirect_to root
 = form_tag :action => 'create', :method => :post do
     = label :post, :content, 'Your Thoughts'
     %br
-    //= text_field :post, :content
     = text_area :post, :content
     %br
     
     = label :post, :category, 'Category'
-    = select :post, :category, ['Observation', 'Challenge', 'Innovation']
+    = select :post, :category, @all_categories
 
     = label :post, :tag, 'Sustainable UN Goal'
-    = select :post, :tag, ['No Poverty', 'Zero Hunger', 'Good Health And Well-being', 'Quality Education', 'Gender Equality', 
-    'Clean Water And Sanitation', 'Affordable And Clean Energy', 'Decent Work And Ecnomic Growth', 
-    'Industry, Innovation And Infrastructure', 'Reduced Inqualities', 'Sustainale Cities And Communities', 
-    'Responsible Consumption And Production', 'Climate Action', 'Life Below Water', 'Life On Land', 
-    'Peace, Justice and Strong Institutions', 'Partnerships For The Goals']
+    = select :post, :tag, @all_un_goals
     %br
     = label :post, :type, 'Private'
     = radio_button_tag :type, 'private'

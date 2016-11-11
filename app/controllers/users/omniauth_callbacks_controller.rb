@@ -12,6 +12,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def failure
+    flash[:notice] = "YOU FAILED"
     redirect_to root_path
   end
   

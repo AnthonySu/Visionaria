@@ -1,22 +1,19 @@
 class PostController < ApplicationController
-    before_filter :authenticate_user!, except: [ :index ]
+    before_filter :authenticate_user!
     
     def post_params
         params.require(:post).permit(:user_id, :username, :content)
     end    
     
     def index
-        if !user_signed_in?
-            redirect_to root_path
-        end
         @posts = Post.where('public = ? OR username = ?', true, current_user.username).order('created_at DESC')
         @users = User.all
     end
     
     def create
-        @post = Post.create!(post_params)
-        @post.user_id = current_user.id
-        @post.username = User.find(@post.user_id).username
+        @user = current_user
+        @post = @user.posts.create!(post_params)
+        @post.username = @post.find_username
         @post.public = true
         @post.public = false if params[:type] == 'private'
         @post.save

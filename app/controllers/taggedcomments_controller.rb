@@ -1,4 +1,6 @@
 class TaggedcommentsController < ApplicationController
+    before_filter :authenticate_user!
+    
     def create
         @taggedpost = TaggedPost.find(params[:tagged_post_id])
         @taggedcomment = @taggedpost.taggedcomments.create!(comment_params)
