@@ -2,16 +2,16 @@ class TaggedPostsController < ApplicationController
     before_filter :authenticate_user!
 
     def tagged_post_params
-        params.require(:post).permit(:user_id, :username, :content, :tag, :category)
+        params.require(:post).permit(:user_id, :content, :tag, :category, :public)
     end 
 
     def index
-        @taggedposts = TaggedPost.where('public = ? OR username = ?', true, current_user.username).order('created_at DESC')
+        @taggedposts = TaggedPost.where('public = ? OR user_id = ?', true, current_user.id).order('created_at DESC')
         if params[:sort_tag] 
-            @taggedposts = @taggedposts.where(tag: params[:sort_tag]).order('created_at DESC')
+            @taggedposts = @taggedposts.where('tag = ?', params[:sort_tag]).order('created_at DESC')
         end
         if params[:sort_category]
-            @taggedposts = @taggedposts.where(category: params[:sort_category]).order('created_at DESC')
+            @taggedposts = @taggedposts.where('category = ?', params[:sort_category]).order('created_at DESC')
         end
     end
 
@@ -23,10 +23,7 @@ class TaggedPostsController < ApplicationController
     def create
         @user = current_user
         @tagged = @user.tagged_posts.create!(tagged_post_params)
-        @tagged.username = @tagged.find_username
-        @tagged.public = true
-        @tagged.public = false if params[:type] == 'private'
-        @tagged.save
+
         flash[:notice] = "Post successfully saved!"
         redirect_to tagged_posts_path
     end

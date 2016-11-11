@@ -1,6 +1,8 @@
 %div{:class => "sidenav", :id => "mySidenav"}
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    = link_to 'Home', post_index_path, :method => :get
     = link_to 'Logout', destroy_user_session_path, :method => :delete
+    
 
 %div{:class => "header_nav_bar"}
     %ul{:class => "header_nav_links"}

@@ -28,8 +28,7 @@ Feature: Filter posts by 17 Sustainable Development Goals (Category)
     And   I should not see "comments3"
     
   Scenario: Can make a post relating to one of the Sustainable Development Goals
-    When  I follow "Share Goal"
-    And   I fill in "Your Thoughts" with "comments4"
+    When  I fill in "Your Thoughts" with "comments4"
     And   I select "Clean Water And Sanitation" from "Sustainable UN Goal"
     And   I select "Innovation" from "Category"
     And   I press "Submit"

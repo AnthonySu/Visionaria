@@ -1,6 +1,6 @@
 %div{:class => "tag_post" }
     %div{:class => "user" }
-        = User.find(post.user_id).username
+        = post.find_username
     %br
     %div{:class => "content_wrap" }
         %div{:class => "filters_tag" }

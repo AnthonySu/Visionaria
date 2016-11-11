@@ -22,8 +22,7 @@ Feature: Points System
     And   I look at the tagged posts
 
   Scenario: Gain a "No Poverty" point for making a post about "No Poverty", one of the Sustainable Development Goals
-    When  I follow "Share Goal"
-    And   I fill in "Your Thoughts" with "comments4"
+    When   I fill in "Your Thoughts" with "comments4"
     And   I select "No Poverty" from "Sustainable UN Goal"
     And   I select "Innovation" from "Category"
     And   I press "Submit"
@@ -31,8 +30,7 @@ Feature: Points System
     Then  I should see "1" points for "No Poverty"
   
   Scenario: Do not gain a "No Poverty" point for making a post about "Zero Hunger"
-    When  I follow "Share Goal"
-    And   I fill in "Your Thoughts" with "comments4"
+    When   I fill in "Your Thoughts" with "comments4"
     And   I select "Zero Hunger" from "Sustainable UN Goal"
     And   I select "Innovation" from "Category"
     And   I press "Submit"

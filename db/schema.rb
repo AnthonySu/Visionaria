@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161111100047) do
+ActiveRecord::Schema.define(version: 20161111113139) do
 
   create_table "comments", force: :cascade do |t|
     t.string   "username"
@@ -37,26 +37,26 @@ ActiveRecord::Schema.define(version: 20161111100047) do
 
   create_table "posts", force: :cascade do |t|
     t.text     "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.integer  "user_id"
     t.string   "username"
     t.integer  "likes"
-    t.boolean  "public"
+    t.boolean  "public",     default: true
   end
 
   add_index "posts", ["user_id"], name: "index_posts_on_user_id"
 
   create_table "tagged_posts", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.string   "category"
     t.string   "tag"
     t.string   "username"
     t.text     "content"
     t.integer  "user_id"
     t.integer  "likes"
-    t.boolean  "public"
+    t.boolean  "public",     default: true
   end
 
   add_index "tagged_posts", ["user_id"], name: "index_tagged_posts_on_user_id"

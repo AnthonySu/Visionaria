@@ -13,8 +13,8 @@
     = label :post, :tag, 'Sustainable UN Goal'
     = select :post, :tag, @all_un_goals
     %br
-    = label :post, :type, 'Private'
-    = radio_button_tag :type, 'private'
+    = label :post, :public, 'Private'
+    = radio_button :post, :public, false
     %br
     = submit_tag 'Submit'
     
