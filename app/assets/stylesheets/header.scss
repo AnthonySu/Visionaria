@@ -9,33 +9,25 @@ h2 {
     color: lightslategrey;
 }
 
-.tabs {
-    font-family: "Courier New", Courier, monospace;
+a.visions {
     background-color: lightgrey;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    padding-right: 3px;
-    padding-left: 3px;
-    overflow: hidden;
-}
-
-.visions {
     border: 1px solid black;
-    padding-right: 258px;
-    padding-left: 258px;
+    width: 49.8%;
     float:left;
-    text-align: center;
-    font-size: 23px;
+    border-radius: 0px;
 }
 
-.goals {
+a.goals {
+    background-color: lightgrey;
     border: 1px solid black;
+    width: 49.8%;
     float:right;
-    padding-right: 200px;
-    padding-left: 200px;
-    overflow: hidden;
-    text-align: center;
-    font-size: 23px;
+    border-radius: 0px;
+}
+
+a.visions:hover, a.goals:hover {
+    background-color: grey;
+    color: white;
 }
 
 .welcome_user {

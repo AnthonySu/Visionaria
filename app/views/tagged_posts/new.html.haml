@@ -3,7 +3,9 @@
     redirect_to root
 = form_tag :action => 'create', :method => :post do
     = label :post, :content, 'Your Thoughts'
-    = text_field :post, :content
+    %br
+    //= text_field :post, :content
+    = text_area :post, :content
     %br
     
     = label :post, :category, 'Category'
@@ -14,6 +16,13 @@
     'Clean Water And Sanitation', 'Affordable And Clean Energy', 'Decent Work And Ecnomic Growth', 
     'Industry, Innovation And Infrastructure', 'Reduced Inqualities', 'Sustainale Cities And Communities', 
     'Responsible Consumption And Production', 'Climate Action', 'Life Below Water', 'Life On Land', 
-    'Peace, Justice and Strong Institutions', 'Partnership For The Goals']
+    'Peace, Justice and Strong Institutions', 'Partnerships For The Goals']
+    %br
+    = label :post, :type, 'Private'
+    = radio_button_tag :type, 'private'
     %br
     = submit_tag 'Submit'
+    
+- if user_signed_in?
+    = link_to 'Back to Goals', tagged_posts_path, :method => :get, :class => "submits"
+    = link_to 'Logout', destroy_user_session_path, :method => :delete, :class => "logins"

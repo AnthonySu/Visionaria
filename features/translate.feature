@@ -1,4 +1,5 @@
-#Not sure about this feature, API might not be free?
+# Don't know how Haoran is implementing this
+# Not sure about this feature, API might not be free?
 Feature: Translate
   As a social media user
   In order to share and understand posts from different languages
@@ -8,18 +9,6 @@ Feature: Translate
     Given I sign up as "dodo" with "dodosrule", and email "dodo@dodo.com"
     And   the following users exist
 
-      | username      | password          | email             |
-      | dodobird      | dodosrule         | dodo@example.com  |
-      | edasaur       | dinosaursarecool  | dino@example.com  |
-    
-    And   the following tagged posts exist
-      
-      | username  | content       | tag               | category           | taggedcomments       | likes     | public    |
-      | edasaur   | "comments"    | Zero Hunger       | Observation        |                      | 0         | true      |
-  
-    And   I look at the tagged posts
-    
-    Scenario: translate a post to Spanish
-    When  I press "translate"
-    And   I choose "Spanish"
-    Then  I should see "comentarios"
+      | username      | name            | password          | email             |
+      | dodobird      | Joanna Ng       | dodosrule         | dodo@example.com  |
+      | edasaur       | Ed Wang         | dinosaursarecool  | dino@example.com  |

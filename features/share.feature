@@ -1,26 +1,23 @@
-#Don't actually know how this scenario should go
+# Don't know how Zhigang is implementing this
 Feature: Share on Facebook
   As a social media user
   In order to share inspiring posts on Visionaria with friends on other social media platforms
   I want to be able to share posts on Facebook
   
   Background:
-    Given I sign up as "dodo" with "dodosrule", and email "dodo@dodo.com"
+    Given I am on the homepage
     And   the following users exist
 
-      | username      | password          | email             |
-      | dodobird      | dodosrule         | dodo@example.com  |
-      | edasaur       | dinosaursarecool  | dino@example.com  |
+      | username      | name            | password          | email             |
+      | dodobird      | Joanna Ng       | dodosrule         | dodo@example.com  |
+      | edasaur       | Ed Wang         | dinosaursarecool  | dino@example.com  |
     
     And   the following tagged posts exist
       
-      | username  | content       | tag               | category           | comments       | likes     | public    |
-      | edasaur   | "comments"    | Zero Hunger       | Observation        |                | 0         | true      |
+      | username  | user_id     | content       | tag               | category           | public    |
+      | edasaur   | 2           | "comments"    | Zero Hunger       | Observation        | true      |
   
+    And   I sign up as "dodo" with "dodosrule", email "dodo@dodo.com", and name "Dodo"
     And   I look at the tagged posts
     
     Scenario: Share an existing post
-    When  I press "Share"
-    Then  I should see "Share post on timeline?"
-    When  I press "Yes"
-    Then  I should see "post shared on timeline"

@@ -4,13 +4,16 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email, :class => 'sign_in_label' %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
+    <%= f.submit "Send me reset password instructions", :class => 'sign_in' %>
   </div>
 <% end %>
+<br />
 
-<%= render "users/shared/links" %>
+<div class="sign_in_label">
+  <%= render "users/shared/links" %>
+</div>

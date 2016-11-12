@@ -1,9 +1,14 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.Welcome {
-    background-color: #ffe164;
+body {
+    font-family: "Lato", sans-serif;
 }
+
+.Welcome {
+    background-color: #fff4e0;
+}
+
 
 h1 {
     font-family: "Lato", sans-serif;
@@ -20,39 +25,89 @@ h1 {
     margin-top: 100px;
 }
 
+.Visionaria {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.Visionaria img {
+    height: 150px;
+}
+
 .sign_ins{
     text-align: center;
     font-size: 18px;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     width: 400px;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 0px;
 }
 
 a {
     width: 195px;
     margin: 10px auto;
     padding: 8px 0px;
-    background: #f05f5a;
     border-radius: 5px;
     font-size: 16px;
-    font-weight: 900;
-    color: white;
-    border-bottom: 3px solid #d2413c;
+    color: #1879D8;
+    text-decoration: none;
+    text-align: center;
 }
 
-a:last-child, a:nth-last-child(2) {
+a.logins {
+    border: 2px solid #1879D8;
+    transition: 0.2s ease;
+    display: block;
+    font-weight: 900;
+}
+
+a.facebook, a.google {
     background: none;
     border: none;
     padding: 0px 0px;
-}
-
-a:link, a:visited {
-    text-decoration: none;
     display: block;
-    color: white;
 }
 
-a:hover, a:active {
+
+a.logins:hover {
+    color: white;
+    background: #1879D8;
+}
+
+
+a:visited {
     text-decoration: none;
+}
+
+input[type=text], input[type=email], input[type=password] {
+    width: 35%;
+    padding: 8px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.field, .actions {
+    color: #00008B;
+    text-align: center;
+}
+
+.sign_in_label {
+    float: left;
+    margin-left: 33%;
+}
+
+.sign_in {
+    float: right;
+    margin-right: 33%;
+}
+
+.remember {
+    float: right;
+    margin-right: 0.3%;
+}
+
+.min_chars {
+    float: left;
+    margin-left: 0.5%;
 }
