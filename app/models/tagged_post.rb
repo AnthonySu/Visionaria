@@ -15,11 +15,15 @@ class TaggedPost < ActiveRecord::Base
         'taggedpost'
     end
 
+    def find_username
+        User.find(self.user_id).username
+    end 
+
     def self.all_un_goals
-        ['No Poverty', 'Zero Hunger', 'Good Health and Well-Being', 'Quality Education', 'Gender Equality', 
-        'Clean Water and Sanitation', 'Affordable and Clean Energy', 'Decent Work and Economic Growth', 
-        'Industry, Innovation and Infrastructure', 'Reduced Inequalities', 'Sustainable Cities and Communities', 
-        'Responsible Consumption and Production', 'Climate Action', 'Life Below Water', 'Life on Land', 
-        'Peace, Justice and Strong Institutions', 'Partnerships for the Goals']
+        ['No Poverty', 'Zero Hunger', 'Good Health And Well-being', 'Quality Education', 'Gender Equality', 
+        'Clean Water And Sanitation', 'Affordable And Clean Energy', 'Decent Work And Ecnomic Growth', 
+        'Industry, Innovation And Infrastructure', 'Reduced Inqualities', 'Sustainale Cities And Communities', 
+        'Responsible Consumption And Production', 'Climate Action', 'Life Below Water', 'Life On Land', 
+        'Peace, Justice and Strong Institutions', 'Partnerships For The Goals']
     end
 end

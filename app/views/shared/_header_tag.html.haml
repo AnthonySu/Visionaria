@@ -1,17 +1,13 @@
-//%h2 Visionaria
-//%div{:class => "tabs" }
-//    = link_to "VISIONARIAS", post_index_path, :method => :get, :class => "visions"
-//    = link_to "SUSTAINABLE UN GOALS", tagged_posts_path, :method => :get, :class => "goals"
-
 %div{:class => "sidenav", :id => "mySidenav"}
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     = link_to 'Home', post_index_path, :method => :get
     = link_to 'Logout', destroy_user_session_path, :method => :delete
+    
 
 %div{:class => "header_nav_bar"}
     %ul{:class => "header_nav_links"}
-        %li= link_to "SUSTAINABLE UN GOALS", tagged_posts_path, :method => :get, :class => "goals"
-        %li= link_to "VISIONARIAS", post_index_path, :method => :get, :class => "active"
+        %li= link_to "SUSTAINABLE UN GOALS", tagged_posts_path, :method => :get, :class => "active"
+        %li= link_to "VISIONARIAS", post_index_path, :method => :get, :class => "visions"
         %div{:class => "open_nav"}
             <span onclick="openNav()">&#9776;</span>
 %br

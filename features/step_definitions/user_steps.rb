@@ -18,6 +18,42 @@ Given /^I sign up as "([^"]*)" with "([^"]*)", email "([^"]*)", and name "([^"]*
   step %Q{I should see "#{user}"}
 end
 
+Given(/^I sign up as an admin "([^"]*)" with "([^"]*)", email "([^"]*)", and name "([^"]*)"$/) do |arg1, arg2, arg3, arg4|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+When(/^I choose "([^"]*)" from "([^"]*)"$/) do |arg1, arg2|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I should see "([^"]*)" points for "([^"]*)"$/) do |arg1, arg2|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I should see all my visions$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I should see all my tagged posts$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+When(/^I view my setting$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+When(/^I view my profile$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+When(/^I view the profile page of "([^"]*)"$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Given(/^I am signed in with email "([^"]*)" and password "([^"]*)"$/) do |arg1, arg2|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
 #Given /facebook login/  do
 #  find(:css, 'a.facebook').click
 #end
