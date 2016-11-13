@@ -15,7 +15,6 @@
             - else
                 %div{:class => "input_wrap"}
                     %p= @info
-                    //%p= @viewed_profile.info
         %p 
             %b{:class => "prof_label"} What Motivates Me...
             - if @owned
@@ -24,7 +23,6 @@
             - else
                 %div{:class => "input_wrap"}
                     %p= @motivations
-                    //%p= @viewed_profile.motivations
         %p 
             %b{:class => "prof_label"} My Top Community Priorities...
             - if @owned
@@ -33,11 +31,9 @@
             - else    
                 %div{:class => "input_wrap"}
                     %p= @priorities
-                    //%p= @viewed_profile.priorities
         %br
         %br
         %br
-    
     //- if @owned
     //    = link_to "Edit Profile", edit_user_profile_path(@viewed_user, @viewed_profile)
     //%div{:class => "my_posts"}
