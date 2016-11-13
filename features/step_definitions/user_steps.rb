@@ -6,8 +6,8 @@ Given /the following users exist/ do |table|
   end
 end
 
-Given /sign up as "([^"]*)" with "([^"]*)", email "([^"]*)", and name "([^"]*)"/ do |user, password, email, name|
-  #pending # Write code here that turns the phrase above into concrete actions
+Given /^I sign up as "([^"]*)" with "([^"]*)", email "([^"]*)", and name "([^"]*)"/ do |user, password, email, name|
+  
   visit '/users/sign_up'
   fill_in "Username", :with => user
   fill_in "Email", :with => email
