@@ -746,16 +746,6 @@
         null,
         null,
         1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         null
       ],
       "/home/ubuntu/workspace/visionaria_app/app/helpers/application_helper.rb": [
@@ -913,13 +903,7 @@
         1,
         0,
         0,
-        null,
         0,
-        0,
-        null,
-        0,
-        0,
-        null,
         null,
         null
       ],
@@ -1083,6 +1067,6 @@
         null
       ]
     },
-    "timestamp": 1479035856
+    "timestamp": 1479061686
   }
 }

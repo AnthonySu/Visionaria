@@ -1,4 +1,4 @@
-class AdminController < UserController
+class AdminsController < UsersController
   before_filter :ensure_admin!
   
   private

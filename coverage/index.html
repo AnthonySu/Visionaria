@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-11-13T11:17:36+00:00">2016-11-13T11:17:36+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-11-13T18:28:06+00:00">2016-11-13T18:28:06+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">91.19%</span></span>
+    (<span class="covered_percent"><span class="green">92.02%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         5.26
+         5.31
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>43</b> files in total.
-    <b>329</b> relevant lines. 
+    <b>326</b> relevant lines. 
     <span class="green"><b>300</b> lines covered</span> and
-    <span class="red"><b>29</b> lines missed </span>
+    <span class="red"><b>26</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -53,7 +53,7 @@
       <tr>
         <td class="strong"><a href="#23e5c953237f96dd55d584e0e76120d45d8057a4" class="src_link" title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>15</td>
+        <td>5</td>
         <td>2</td>
         <td>2</td>
         <td>0</td>
@@ -232,12 +232,12 @@
       
       <tr>
         <td class="strong"><a href="#0ee70a92a4fa2d38df609178d9dc7bbfd25fe6af" class="src_link" title="app/models/profile.rb">app/models/profile.rb</a></td>
-        <td class="red strong">45.45 %</td>
-        <td>18</td>
-        <td>11</td>
+        <td class="red strong">62.5 %</td>
+        <td>12</td>
+        <td>8</td>
         <td>5</td>
-        <td>6</td>
-        <td>0.5</td>
+        <td>3</td>
+        <td>0.6</td>
       </tr>
       
       <tr>
@@ -535,66 +535,6 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
-          
-          
-          <code class="ruby">  </code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="6">
-          
-          
-          <code class="ruby">  #before_filter :configure_permitted_parameters, if: :devise_controller?</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="7">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="8">
-          
-          
-          <code class="ruby">  #protected</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="9">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="10">
-          
-          
-          <code class="ruby">  #def configure_permitted_parameters</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="11">
-          
-          
-          <code class="ruby">  #    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:username, :name, :email, :password, :password_confirmation, :provider, :uid) }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="12">
-          
-          
-          <code class="ruby">  #    devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:username, :name, :email, :password, :current_password, :avatar) }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="13">
-          
-          
-          <code class="ruby">  #end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="14">
-          
-          
-          <code class="ruby">  </code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">end</code>
@@ -2371,11 +2311,11 @@
         <div class="source_table" id="0ee70a92a4fa2d38df609178d9dc7bbfd25fe6af">
   <div class="header">
     <h3>app/models/profile.rb</h3>
-    <h4><span class="red">45.45 %</span> covered</h4>
+    <h4><span class="red">62.5 %</span> covered</h4>
     <div>
-      <b>11</b> relevant lines. 
+      <b>8</b> relevant lines. 
       <span class="green"><b>5</b> lines covered</span> and
-      <span class="red"><b>6</b> lines missed.</span>
+      <span class="red"><b>3</b> lines missed.</span>
     </div>
   </div>
   
@@ -2427,64 +2367,28 @@
         <li class="missed" data-hits="0" data-linenumber="8">
           
           
-          <code class="ruby">        if self.info.blank?</code>
+          <code class="ruby">        self.info = &quot;Click on text to edit user info.&quot; if self.info.blank?</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="9">
           
           
-          <code class="ruby">            self.info = &quot;Click on text to edit user info.&quot;</code>
+          <code class="ruby">        self.motivations = &quot;Click on text to edit user motivations.&quot; if self.motivations.blank?</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="missed" data-hits="0" data-linenumber="10">
           
           
-          <code class="ruby">        end</code>
+          <code class="ruby">        self.priorities = &quot;Click on text to edit user priorities.&quot; if self.priorities.blank?</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="11">
-          
-          
-          <code class="ruby">        if self.motivations.blank?</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="12">
-          
-          
-          <code class="ruby">            self.motivations = &quot;Click on text to edit user motivations.&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="13">
-          
-          
-          <code class="ruby">        end</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="14">
-          
-          
-          <code class="ruby">        if self.priorities.blank?</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="15">
-          
-          
-          <code class="ruby">            self.priorities = &quot;Click on text to edit user priorities.&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="16">
-          
-          
-          <code class="ruby">        end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="never" data-hits="" data-linenumber="12">
           
           
           <code class="ruby">end</code>
@@ -5253,13 +5157,13 @@
         <li class="never" data-hits="" data-linenumber="253">
           
           
-          <code class="ruby">    #callback_url: &quot;https://visionaria-app.herokuapp.com/users/auth/facebook/callback&quot;</code>
+          <code class="ruby">    callback_url: &quot;https://visionaria-app.herokuapp.com/users/auth/facebook/callback&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="254">
           
           
-          <code class="ruby">    callback_url: &quot;https://dodospace-joannangx.c9users.io/users/auth/facebook/callback&quot;</code>
+          <code class="ruby">    #callback_url: &quot;https://dodospace-joannangx.c9users.io/users/auth/facebook/callback&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="255">
