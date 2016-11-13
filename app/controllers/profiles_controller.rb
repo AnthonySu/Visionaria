@@ -6,9 +6,15 @@ class ProfilesController < ApplicationController
     end    
     
     def show
-        @viewed_user = User.find(params[:user_id])
+        @viewed_user = User.find(params[:id])
         @viewed_profile = @viewed_user.profile
         @owned = @viewed_profile == current_user.profile
+        
+        if @owned == false
+            @viewed_profile.info == "Click on text to edit user info." ? @info = " " : @info = @viewed_profile.info
+            @viewed_profile.motivations == "Click on text to edit user motivations." ? @motivations = " " : @motivations = @viewed_profile.motivations
+            @viewed_profile.priorities == "Click on text to edit user priorities." ? @priorities = " " : @priorities = @viewed_profile.priorities
+        end
     end    
     
     def update

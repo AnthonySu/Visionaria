@@ -11,26 +11,29 @@
             %b{:class => "prof_label"} Info
             - if @owned
                 %div{:class => "edit_input_wrap"}
-                    %p= best_in_place @viewed_profile, :info, :as => :textarea, :ok_button => 'Save', :cancel_button => 'Cancel', :url => user_profile_path
+                    %p= best_in_place @viewed_profile, :info, :as => :textarea, :ok_button => 'Save', :cancel_button => 'Cancel', :url => profile_path
             - else
                 %div{:class => "input_wrap"}
-                    %p= @viewed_profile.info
+                    %p= @info
+                    //%p= @viewed_profile.info
         %p 
             %b{:class => "prof_label"} What Motivates Me...
             - if @owned
                 %div{:class => "edit_input_wrap"}
-                    %p= best_in_place @viewed_profile, :motivations, :as => :textarea, :ok_button => 'Save', :cancel_button => 'Cancel', :url => user_profile_path
+                    %p= best_in_place @viewed_profile, :motivations, :as => :textarea, :ok_button => 'Save', :cancel_button => 'Cancel', :url => profile_path
             - else
                 %div{:class => "input_wrap"}
-                    %p= @viewed_profile.motivations
+                    %p= @motivations
+                    //%p= @viewed_profile.motivations
         %p 
             %b{:class => "prof_label"} My Top Community Priorities...
             - if @owned
                 %div{:class => "edit_input_wrap"}
-                    %p= best_in_place @viewed_profile, :priorities, :as => :textarea, :ok_button => 'Save', :cancel_button => 'Cancel', :url => user_profile_path
-            - else
+                    %p= best_in_place @viewed_profile, :priorities, :as => :textarea, :ok_button => 'Save', :cancel_button => 'Cancel', :url => profile_path
+            - else    
                 %div{:class => "input_wrap"}
-                    %p= @viewed_profile.priorities
+                    %p= @priorities
+                    //%p= @viewed_profile.priorities
         %br
         %br
         %br
