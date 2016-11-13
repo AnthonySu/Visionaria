@@ -9,6 +9,34 @@ body {
     background-color: #fff4e0;
 }
 
+#overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -5;
+    background: rgba(0, 0, 0, 0.4); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgba(24,121,216,0.56), rgba(0,0,0,0.25),rgba(0,0,0,0.1));
+    background: -o-linear-gradient(rgba(24,121,216,0.56), rgba(0,0,0,0.25),rgba(0,0,0,0.1)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgba(24,121,216,0.56), rgba(0,0,0,0.25),rgba(0,0,0,0.1)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgba(24,121,216,0.56), rgba(0,0,0,0.25),rgba(0,0,0,0.1)); /* Standard syntax */
+    top: 0;
+}
+
+#home-bg {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -10;
+    top: 0px;
+}
+
+#home-bg img{
+    width: 100%;
+    height: 100%;
+    overflow: none;
+    object-fit: cover;
+}
+
 h1 {
     font-family: "Lato", sans-serif;
     font-size: 70px;
@@ -32,6 +60,7 @@ h1 {
 
 .Visionaria img {
     height: 150px;
+    margin-bottom: 30px;
 }
 
 .sign_ins{
@@ -49,13 +78,13 @@ a.logins, a.facebook, a.google {
     padding: 8px 0px;
     border-radius: 5px;
     font-size: 16px;
-    color: #1879D8;
     text-decoration: none;
     text-align: center;
+    background: #3598DD;
+    color: white;
 }
 
 a.logins {
-    border: 2px solid #1879D8;
     transition: 0.2s ease;
     display: block;
     font-weight: 900;
@@ -70,7 +99,6 @@ a.facebook, a.google {
 
 
 a.logins:hover {
-    color: white;
     background: #1879D8;
 }
 
