@@ -18,7 +18,7 @@ class ProfilesController < ApplicationController
     end    
     
     def update
-        @viewed_profile = User.find(params[:user_id]).profile
+        @viewed_profile = User.find(params[:id]).profile
         @viewed_profile.update(profile_params)
         @viewed_profile.check_params
         @viewed_profile.save!

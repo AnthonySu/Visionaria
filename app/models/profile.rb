@@ -5,14 +5,8 @@ class Profile < ActiveRecord::Base
     validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
     
     def check_params
-        if self.info.blank?
-            self.info = "Click on text to edit user info."
-        end
-        if self.motivations.blank?
-            self.motivations = "Click on text to edit user motivations."
-        end
-        if self.priorities.blank?
-            self.priorities = "Click on text to edit user priorities."
-        end
+        self.info = "Click on text to edit user info." if self.info.blank?
+        self.motivations = "Click on text to edit user motivations." if self.motivations.blank?
+        self.priorities = "Click on text to edit user priorities." if self.priorities.blank?
     end
 end
