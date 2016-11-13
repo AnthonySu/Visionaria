@@ -16,7 +16,6 @@ class PostsController < ApplicationController
     end
     
     def create
-        flash[:notice] = "hello, dodo"
         @user = current_user
         @post = @user.posts.create!(post_params)
 

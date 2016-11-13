@@ -6,8 +6,8 @@ Given /the following tagged posts exist/ do |table|
   end
 end
 
-When /I look at the tagged posts/ do
-  visit '/tagged_posts'
+When /^I look at the tagged posts$/ do
+  visit tagged_posts_path
 end
 
 When /^I follow image link "([^"]*)"$/ do |img_alt|

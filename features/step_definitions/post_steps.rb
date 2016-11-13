@@ -29,3 +29,11 @@ end
 Then(/^I should not see a delete option for the post "([^"]*)" by "([^"]*)"$/) do |arg1, arg2|
   pending # Write code here that turns the phrase above into concrete actions
 end
+
+When(/^I follow edit$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I change the$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end

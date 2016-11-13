@@ -22,11 +22,11 @@ Feature: Edit and delete user's own posts and tagged posts
       | dodobird      | 1       | "comments"    | Zero Hunger       | Observation        | true   |
       | edasaur       | 2       | "comments2"   | Zero Hunger       | Observation        | false  |
       
-    And   I sign up as "dodo" with "dodorule", email "dodo@example.com", and name "Joanna Ng"
+    And   I sign up as "dodo" with "dodorule", email "dodo@dodo.com", and name "Joanna Ng"
   
   #happy path
   Scenario: I can edit and delete my own posts
-    When I am on the post page
+    When I look at the posts
     And  I follow edit
     Then I am on the edit page
     And  I change the 
