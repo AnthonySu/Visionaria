@@ -468,7 +468,7 @@
       "/home/ubuntu/workspace/visionaria_app/config/routes.rb": [
         1,
         1,
-        null,
+        1,
         1,
         1,
         1,
@@ -570,14 +570,6 @@
         23,
         null,
         48,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         null,
         null,
         null,
@@ -829,7 +821,7 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/visionaria_app/app/controllers/post_controller.rb": [
+      "/home/ubuntu/workspace/visionaria_app/app/controllers/posts_controller.rb": [
         1,
         1,
         null,
@@ -1035,6 +1027,6 @@
         null
       ]
     },
-    "timestamp": 1478869700
+    "timestamp": 1478886582
   }
 }

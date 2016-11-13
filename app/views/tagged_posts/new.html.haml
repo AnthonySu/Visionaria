@@ -1,6 +1,5 @@
 %h2 Make New Post
-//- if !user_signed_in?
-//    redirect_to root
+
 = form_tag :action => 'create', :method => :post do
     = label :post, :content, 'Your Thoughts'
     %br

@@ -7,7 +7,7 @@ Given /the following posts exist/ do |table|
 end
 
 When /I look at the posts/ do
-  visit '/post'
+  visit '/posts'
 end
 
 When(/^I delete the post with "([^"]*)"$/) do |arg1|

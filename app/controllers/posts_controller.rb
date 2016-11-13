@@ -1,4 +1,4 @@
-class PostController < ApplicationController
+class PostsController < ApplicationController
     before_filter :authenticate_user!
     
     def post_params
@@ -6,15 +6,22 @@ class PostController < ApplicationController
     end    
     
     def index
+        @user = current_user
+        if @user.profile.nil?
+            @profile = Profile.create({:user_id => @user.id})
+            @user.profile = @profile
+        end
+        
         @posts = Post.where('public = ? OR user_id = ?', true, current_user.id).order('created_at DESC')
     end
     
     def create
+        flash[:notice] = "hello, dodo"
         @user = current_user
         @post = @user.posts.create!(post_params)
 
         flash[:notice] = "Post successfully saved!"
-        redirect_to post_index_path
+        redirect_to posts_path
     end
     
     def update
@@ -38,7 +45,7 @@ class PostController < ApplicationController
             end
             @post.save
         end
-        redirect_to post_index_path
+        redirect_to posts_path
     end
     
 end

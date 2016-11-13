@@ -15,9 +15,6 @@ class TaggedcommentsController < ApplicationController
     end
     
     def index
-        if !user_signed_in?
-            redirect_to root_path
-        end
         @taggedpost = TaggedPost.find(params[:tagged_post_id])
         @taggedcomments = @taggedpost.taggedcomments.order('created_at DESC')
     end

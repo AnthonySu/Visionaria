@@ -15,9 +15,6 @@ class CommentsController < ApplicationController
     end
     
     def index
-        if !user_signed_in?
-            redirect_to root_path
-        end
         @post = Post.find(params[:post_id])
         @comments = @post.comments.order('created_at DESC')
     end

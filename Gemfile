@@ -25,6 +25,11 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
+
+gem 'paperclip', '~> 4.1'
+
+gem 'best_in_place'
+
 # haml
 gem 'haml'
 # Use ActiveModel has_secure_password

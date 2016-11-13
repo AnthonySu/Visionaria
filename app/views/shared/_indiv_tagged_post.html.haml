@@ -1,6 +1,6 @@
 %div{:class => "tag_post" }
     %div{:class => "user" }
-        = post.find_username
+        = link_to "#{post.find_username}", user_profile_path(post.user, post.user.profile), :class => "profile_link"
     %br
     %div{:class => "content_wrap" }
         %div{:class => "filters_tag" }

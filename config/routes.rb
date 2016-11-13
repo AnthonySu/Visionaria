@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => { omniauth_callbacks: 'users/omniauth_callbacks', registrations: 'registrations' }
-  #devise_for :users, :controllers => { omniauth_callbacks: "users/omniauth_callbacks" }
-  resources :post do
+  resources :users, only: [] do
+    resources :profiles, only: [:show, :edit, :update]
+  end
+  resources :posts, only: [:index, :show, :create, :update, :like] do
     resources :comments
     member do
       get 'like'
     end
   end
-  resources :tagged_posts do
+  resources :tagged_posts, only: [:index, :show, :create, :edit, :like] do
     resources :taggedcomments
     member do
       get 'like'
