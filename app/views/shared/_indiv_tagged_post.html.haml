@@ -1,17 +1,16 @@
 %div{:class => "tag_post" }
     %div{:class => "user" }
-        = User.find(post.user_id).username
+        = link_to "#{post.find_username}", profile_path(post.user), :class => "profile_link"
+        - if current_user.username == post.find_username
+            = link_to 'Delete', tagged_post_path(post), method: :delete, data: { confirm: 'Are you sure?' }
+            = link_to 'Edit', edit_tagged_post_path(post)
     %br
     %div{:class => "content_wrap" }
         %div{:class => "filters_tag" }
-            //Sustainable UN Goal: 
-            //= link_to "#{post.tag}", tagged_posts_path(:sort_tag => post.tag), :class => "tag_sort"
             = link_to image_tag("#{post.tag}.jpg", alt: "#{post.tag}"), tagged_posts_path(:sort_tag => post.tag), :class => "tag_sort"
         %div{:class => "tagged_content" }
             %p= post.content
         %div{:class => "filters_cat" }
-            //Category:
-            //= link_to "#{post.category}", tagged_posts_path(:sort_category => post.category), :class => "tag_sort"
             = link_to image_tag("#{post.category}.png", alt: "#{post.category}"), tagged_posts_path(:sort_category => post.category), :class => "tag_sort"
     %div{:class => "timestamp" }
         Posted on
@@ -21,5 +20,5 @@
     =form_tag do 
         =link_to "#{post.taggedcomments.count} Comments", tagged_post_taggedcomments_path(post)
         =toggle_like_tag_button(post,current_user)
-        =post.likes.count
+        ="(#{post.likes.count})"
 %br

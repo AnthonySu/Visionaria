@@ -1,7 +1,10 @@
 <body class="Welcome">
 %br
+%div{:id => "overlay"}
+%div{:id => "home-bg" }
+    = image_tag("home_image.jpg")
 %div{:class => "Visionaria" }
-    = image_tag("visionaria.png")
+    = image_tag("visionaria_white.png")
 %div{:class => "sign_ins" }
     = link_to 'Login', new_user_session_path, :class => "logins"
     = link_to 'Sign up', new_user_registration_path, :class => "logins"

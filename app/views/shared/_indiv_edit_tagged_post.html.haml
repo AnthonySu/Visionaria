@@ -1,0 +1,18 @@
+%h2 Edit UN Sustainable goal
+- if !user_signed_in?
+    redirect_to root
+
+= form_for @post, method: "put"  do |f|
+    = f.label :content, "Your Thoughts"
+    = f.text_area :content
+    = f.label :category, 'Category'
+    = f.select :category, TaggedPost.all_categories
+    = f.label :tag, 'Sustainable UN Goal'
+    = f.select :tag, TaggedPost.all_un_goals
+    = f.label :public, 'Private'
+    = f.radio_button :public, false
+    = f.submit "Save changes"
+    
+- if user_signed_in?
+    = link_to 'Back to Visions', tagged_posts_path, :method => :get, :class => "submits"
+    = link_to 'Logout', destroy_user_session_path, :method => :delete, :class => "logins"

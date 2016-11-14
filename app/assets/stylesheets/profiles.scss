@@ -1,0 +1,73 @@
+// Place all the styles related to the Profiles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.profile_page {
+    margin: auto;
+    //padding-top: 70px;
+    padding-top: 3%;
+    width: 73%;
+    //border: 1px solid;
+    display: flex;
+}
+
+.profile_image {
+    border: 1px solid;
+    float: left;
+    width: 40%;
+}
+
+.prof_user {
+    font-size: 25px;
+}
+
+.loc_label {
+    font-size: 15px;
+}
+
+.prof_label {
+    font-size: 18px;
+}
+
+.about_me {
+    display: block;
+    float: left;
+    border: 1px solid;
+    padding-left: 30px;
+    flex: 1;
+}
+
+.best_in_place {
+    font-size: 16px;
+}
+
+.edit_input_wrap, .input_wrap {
+    padding: 5px 20px 5px 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 2px;
+}
+
+.edit_input_wrap {
+    background: #cdd6d3;
+}
+
+.input_wrap {
+    background: #e2e1cc;
+}
+
+.best_in_place:hover {
+    cursor: pointer;
+    color: #e5e5e5;
+}
+
+.purr {
+      position: fixed;
+      top: 30px;
+      right: 100px;
+      width: 250px;
+      padding: 20px;
+      background-color: #FCC;
+      border: solid 2px #666;
+      &:first-letter { text-transform: uppercase };
+}

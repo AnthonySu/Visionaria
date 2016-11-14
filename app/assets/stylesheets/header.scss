@@ -1,5 +1,39 @@
 body {
-    background-color: aliceblue;
+    background-color: #F1F1F1;
+    margin:0;
+}
+
+ul.header_nav_links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: right;
+    width:48%;
+    border-left:1px solid #bbb;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #2EB1B3;
 }
 
 h2 {
@@ -7,27 +41,6 @@ h2 {
     font-size: 60px;
     text-align: center;
     color: lightslategrey;
-}
-
-a.visions {
-    background-color: lightgrey;
-    border: 1px solid black;
-    width: 49.8%;
-    float:left;
-    border-radius: 0px;
-}
-
-a.goals {
-    background-color: lightgrey;
-    border: 1px solid black;
-    width: 49.8%;
-    float:right;
-    border-radius: 0px;
-}
-
-a.visions:hover, a.goals:hover {
-    background-color: grey;
-    color: white;
 }
 
 .welcome_user {

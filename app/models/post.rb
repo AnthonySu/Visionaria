@@ -8,4 +8,8 @@ class Post < ActiveRecord::Base
     def classname
         'post'
     end
+    
+    def find_username
+        User.find(self.user_id).username
+    end    
 end

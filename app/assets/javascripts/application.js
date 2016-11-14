@@ -12,6 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require social-share-button
-//= require turbolinks
+//= require jquery.purr
+//= require best_in_place
 //= require_tree .

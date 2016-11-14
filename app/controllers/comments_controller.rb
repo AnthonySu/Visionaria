@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+    before_filter :authenticate_user!
+    
     def create
         @post = Post.find(params[:post_id])
         @comment = @post.comments.create!(comment_params)
@@ -13,9 +15,6 @@ class CommentsController < ApplicationController
     end
     
     def index
-        if !user_signed_in?
-            redirect_to root_path
-        end
         @post = Post.find(params[:post_id])
         @comments = @post.comments.order('created_at DESC')
     end
