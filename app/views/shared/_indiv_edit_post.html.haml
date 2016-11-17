@@ -1,0 +1,14 @@
+%h2 Edit Vision
+- if !user_signed_in?
+    redirect_to root
+
+= form_for @post, method: "put"  do |f|
+    = f.label :content, "Your Thoughts"
+    = f.text_area :content
+    = f.label :public, 'Private'
+    = f.radio_button :public, false
+    = f.submit "Save changes"
+    
+- if user_signed_in?
+    = link_to 'Back to Visions', posts_path, :method => :get, :class => "submits"
+    = link_to 'Logout', destroy_user_session_path, :method => :delete, :class => "logins"

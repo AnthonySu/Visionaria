@@ -23,10 +23,31 @@ class PostsController < ApplicationController
         redirect_to posts_path
     end
     
+    def edit
+        @post = Post.find(params[:id])
+    end
+    
     def update
+        @post = Post.find(params[:id])
+        @post.update(post_params)
+            
+        flash[:notice] = "Post successfully edited!"
+        redirect_to posts_path
     end
     
     def destroy
+        @post = Post.find(params[:id])
+        @comments = @post.comments
+        @comments.each do |comment|
+           comment.destroy! 
+        end
+        @likes = @post.likes
+        @likes.each do |like|
+           like.destroy! 
+        end
+        @post.destroy!
+        flash[:notice] = "Post successfully deleted!"
+        redirect_to posts_path
     end
     
     def like

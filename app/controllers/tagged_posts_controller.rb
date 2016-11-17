@@ -2,7 +2,7 @@ class TaggedPostsController < ApplicationController
     before_filter :authenticate_user!
 
     def tagged_post_params
-        params.require(:post).permit(:user_id, :content, :tag, :category, :public)
+        params.require(:tagged_post).permit(:user_id, :content, :tag, :category, :public)
     end 
 
     def index
@@ -34,6 +34,32 @@ class TaggedPostsController < ApplicationController
         redirect_to tagged_posts_path
     end
     
+    def edit
+        @post = TaggedPost.find(params[:id])
+    end
+    
+    def update
+        @post = TaggedPost.find(params[:id])
+        @post.update(tagged_post_params)
+            
+        flash[:notice] = "Tagged post successfully edited!"
+        redirect_to tagged_posts_path
+    end
+    
+    def destroy
+        @post = TaggedPost.find(params[:id])
+        @comments = @post.taggedcomments
+        @comments.each do |comment|
+           comment.destroy! 
+        end
+        @likes = @post.likes
+        @likes.each do |like|
+           like.destroy! 
+        end
+        @post.destroy!
+        flash[:notice] = "Tagged post successfully deleted!"
+        redirect_to tagged_posts_path
+    end
     
     def like
         if params[:id]!=nil
