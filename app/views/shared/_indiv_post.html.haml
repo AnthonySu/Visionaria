@@ -1,6 +1,9 @@
 %div{:class => "post" }
     %div{:class => "user" }
-        = link_to "#{post.find_username}", profile_path(post.user), :class => "profile_link"
+        %div{:class => "user_image" }
+            = image_tag(current_user.avatar.url(:thumb), :class => "post_thumb_profile")
+        %div{:class => "user_name" }    
+            = link_to "#{post.find_username}", profile_path(post.user), :class => "profile_link"
     %div{:class => "content" }
         %p= post.content
     %div{:class => "timestamp" }

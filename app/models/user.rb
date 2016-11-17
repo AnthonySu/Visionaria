@@ -12,6 +12,9 @@ class User < ActiveRecord::Base
   has_many :likes, :source => :posts
   has_one :profile, :dependent => :destroy
  
+  has_attached_file :avatar, :styles => { :medium => "400x400>", :thumb => "100x100#" }, :default_url => ":style/missing.png"
+  validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
+ 
   validates_presence_of :username
   validates :username, uniqueness: true
   
@@ -21,7 +24,7 @@ class User < ActiveRecord::Base
         user.username = auth.info.email
         user.password = Devise.friendly_token[0,20]
         user.name = auth.info.name
-        #user.image = auth.info.image # assuming the user model has an image
+        user.avatar = auth.info.image # assuming the user model has an image
     end
   end
   

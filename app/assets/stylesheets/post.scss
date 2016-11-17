@@ -37,12 +37,24 @@
     padding-top: 15px;
 }
 
+.user_image {
+    float: left;
+}
+
+.user_name {
+    float: left;
+    flex: 1;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
 .user {
+    display: flex;
     text-align: left;
     padding-left: 10px;
     padding-top: 5px;
     padding-bottom: 10px;
-    font-size: 12px;
+    font-size: 14px;
     background-color: #065169;
 }
 
@@ -102,4 +114,18 @@ textarea {
 a.profile_link {
     color: #bbb;
     text-decoration: none;
+}
+
+.post_thumb_profile {
+    margin-left: 10px;
+    background-color: white;
+    border: 1px solid #d9d9d9;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    height: 30px;
+    width: 30px;
+    overflow: hidden;
+    text-align: center;
+    img { width: 100% }
 }
