@@ -6,9 +6,6 @@ class PostsController < ApplicationController
     end    
     
     def index
-        puts "HELLLOOOOOOOOOOOOOW WWWWOOOOOORRRLLLLLDDDD"
-        puts current_user.avatar.url
-        puts current_user.avatar.url(:thumb)
         @posts = Post.where('public = ? OR user_id = ?', true, current_user.id).order('created_at DESC')
     end
     
