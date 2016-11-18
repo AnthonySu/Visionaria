@@ -44,17 +44,3 @@ Feature: User Profiles
       Then  I should not see "Click on text to edit user info."
       And   I should not see "Click on text to edit user motivations."
       And   I should not see "Click on text to edit user priorities."
-      
-    Scenario: Can view my total points for posting
-      When  I view my profile
-      Then  I should see "0 points"
-      
-    Scenario: Can view all my posts
-      When  I view my profile
-      And   I press "YO"
-      Then  I should see all my visions
-      
-    Scenario: Can view all my tagged posts
-      When  I view my profile
-      And   I press "PROGRESO"
-      Then  I should see all my tagged posts
