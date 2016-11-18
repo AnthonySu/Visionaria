@@ -33,6 +33,9 @@ gem 'best_in_place'
 # Merit gem for the points system as motivations for the 17 Sustainable Goals
 gem 'merit'
 
+# easy_translate gem for the translation api
+gem 'easy_translate'
+
 # haml
 gem 'haml'
 # Use ActiveModel has_secure_password
