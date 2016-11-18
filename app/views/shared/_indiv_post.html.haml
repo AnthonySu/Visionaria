@@ -12,8 +12,8 @@
     %div{:class => "timestamp" }
         Posted on
         = post.created_at.strftime("%m/%d/%Y at %l:%M%p")
-    %div{:class => "social-share-button-facebook"}
-        = social_share_button_tag("My Post")
+    %div{:class => "social-share-button"}
+        =social_share_button_tag(post.content, :url => "http://myapp.com/foo/bar")
     %div{:class => "comments"}
         =form_tag do 
             = link_to "#{post.comments.count} Comments", post_comments_path(post)
@@ -23,3 +23,5 @@
 
     
 %br
+
+
