@@ -1,4 +1,6 @@
 class TaggedPost < ActiveRecord::Base
+  has_merit
+
     belongs_to :user
     has_many :taggedcomments
     has_many :points
