@@ -73,13 +73,15 @@
     padding-bottom: 10px;
 }
 
-.social-share-button-facebook {
-	width: 16px;
-	height: 16px;
-	background: url("/social/facebook.png") no-repeat;
-	float: right;
-	padding-right: 20px;
-	
+$s_size: 24px;
+
+.social-share-button {
+  .ssb-icon {
+    background-size: $s_size $s_size;
+    height: $s_size;
+    width: $s_size;
+    float:right;
+  }
 }
 
 textarea { 
