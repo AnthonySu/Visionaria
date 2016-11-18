@@ -6,12 +6,9 @@ class PostsController < ApplicationController
     end    
     
     def index
-        @user = current_user
-        if @user.profile.nil?
-            @profile = Profile.create({:user_id => @user.id})
-            @user.profile = @profile
-        end
-        
+        puts "HELLLOOOOOOOOOOOOOW WWWWOOOOOORRRLLLLLDDDD"
+        puts current_user.avatar.url
+        puts current_user.avatar.url(:thumb)
         @posts = Post.where('public = ? OR user_id = ?', true, current_user.id).order('created_at DESC')
     end
     
