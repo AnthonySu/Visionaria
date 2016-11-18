@@ -29,7 +29,8 @@ gem 'omniauth-google-oauth2'
 gem 'paperclip', '~> 4.1'
 
 gem 'best_in_place'
-
+#filter 
+gem 'html-pipeline'
 
 #gem 'shareable'
 
