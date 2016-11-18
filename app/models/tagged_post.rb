@@ -1,6 +1,7 @@
 class TaggedPost < ActiveRecord::Base
     belongs_to :user
     has_many :taggedcomments
+    has_many :points
     has_many :likes
     has_many :liking_users, :through => :likes, :source => :user
     validates :content, :presence => true
